@@ -1,30 +1,27 @@
 import React from 'react';
 import Header from '../../components/Header/Header';
-import Banner from '../../components/Banner/Banner';
+import { Outlet } from 'react-router';
 import Footer from '../../components/Footer/Footer';
-import FeaturedEvents from '../../components/FeaturedEvents/FeaturedEvents';
 
-const Home = () => {
+const Events = () => {
     return (
         <div>
             <header className=" relative">
                 <div className='bg-primary sticky'>
                     <section className=" top-0  w-full max-w-screen-xl mx-auto z-50">
-                    <Header />
-                </section>
+                        <Header />
+                    </section>
                 </div>
             </header>
 
-          <main>
-            <Banner></Banner>
-            <FeaturedEvents></FeaturedEvents>
-          </main>
-
-          <footer>
-            <Footer></Footer>
-          </footer>
+            <main>
+                <Outlet></Outlet>
+            </main>
+            <footer>
+                <Footer></Footer>
+            </footer>
         </div>
     );
 };
 
-export default Home;
+export default Events;

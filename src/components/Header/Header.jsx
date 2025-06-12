@@ -4,7 +4,7 @@ import Navbar from './Navbar';
 const Header = () => {
     return (
         <div className=' w-full'>
-            <div className='py-2 mx-auto'>
+            <div className='py-3 mx-auto'>
                 <Navbar></Navbar>
             </div>
         </div>
