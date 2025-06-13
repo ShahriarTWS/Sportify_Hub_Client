@@ -3,6 +3,7 @@ import Header from '../../components/Header/Header';
 import Banner from '../../components/Banner/Banner';
 import Footer from '../../components/Footer/Footer';
 import FeaturedEvents from '../../components/FeaturedEvents/FeaturedEvents';
+import HowSportifyHubWorks from '../../components/ExtraSection/HowSportifyHubWorks';
 
 const Home = () => {
     return (
@@ -18,6 +19,7 @@ const Home = () => {
           <main>
             <Banner></Banner>
             <FeaturedEvents></FeaturedEvents>
+            <HowSportifyHubWorks></HowSportifyHubWorks>
           </main>
 
           <footer>
