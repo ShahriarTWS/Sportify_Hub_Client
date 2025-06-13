@@ -4,6 +4,7 @@ import Banner from '../../components/Banner/Banner';
 import Footer from '../../components/Footer/Footer';
 import FeaturedEvents from '../../components/FeaturedEvents/FeaturedEvents';
 import HowSportifyHubWorks from '../../components/ExtraSection/HowSportifyHubWorks';
+import TopCategories from '../../components/ExtraSection/TopCategories';
 
 const Home = () => {
     return (
@@ -20,6 +21,7 @@ const Home = () => {
             <Banner></Banner>
             <FeaturedEvents></FeaturedEvents>
             <HowSportifyHubWorks></HowSportifyHubWorks>
+            <TopCategories></TopCategories>
           </main>
 
           <footer>

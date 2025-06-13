@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, NavLink } from 'react-router';
-import { Menu, X, Calendar, Settings, LogOut, Plus } from 'lucide-react';
+import { Menu, X, Calendar, Settings, LogOut, Plus, ChevronDown, ChevronUp } from 'lucide-react';
 import sportifylogo from '../../assets/logo/sportifyLogo.png';
 import { useAuth } from '../../hooks/hooks';
 import { motion } from 'framer-motion';
@@ -9,7 +9,7 @@ import Loading from '../Loading';
 const Navbar = () => {
 
     const [isOpen, setIsOpen] = useState(false);
-    const [showProfileMenu, setShowProfileMenu] = useState(false);
+    // const [showProfileMenu, setShowProfileMenu] = useState(false);
     const { user, logOut, loading } = useAuth();
 
     const handleLogout = () => {
@@ -36,8 +36,8 @@ const Navbar = () => {
 
     return (
         <nav className=" top-0 ">
-            <div className="max-w-7xl mx-auto px-4 md:px-0">
-                <div className="flex justify-between h-16 items-center relative">
+            <div className="max-w-7xl mx-auto px-4 md:px-4">
+                <div className="flex justify-between h-14 items-center relative">
                     <Link to="/" className="flex items-center space-x-2">
                         <img className="h-16" src={sportifylogo} alt="Sportify Logo" />
                     </Link>
@@ -51,7 +51,7 @@ const Navbar = () => {
                             ) : user ? (
                                 <div className="relative flex gap-6 items-center">
                                     <div>
-                                        <div className="group flex items-center space-x-2 cursor-pointer">
+                                        <div className="group flex items-center  cursor-pointer">
                                             <img
                                                 src={user.photoURL}
                                                 alt={user.displayName}
@@ -61,9 +61,15 @@ const Navbar = () => {
                                             <span className="pointer-events-none absolute right-1/2 -translate-y-1/2 top-full mt-1 px-3 py-1 rounded bg-blue-600 text-white text-xs opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
                                                 {user.displayName}
                                             </span>
+                                            {isOpen ? (
+                                                <ChevronUp onClick={() => setIsOpen(!isOpen)} className="text-white w-6 h-6" />
+                                            ) : (
+                                                <ChevronDown onClick={() => setIsOpen(!isOpen)} className="text-white w-6 h-6" />
+                                            )}
                                         </div>
                                     </div>
                                     <div>
+
                                         <button onClick={handleLogout} className="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition-colors ">
                                             Logout
                                         </button>
@@ -113,10 +119,10 @@ const Navbar = () => {
                                     />
                                     <span className="text-sm font-medium text-gray-900">{user.displayName}</span>
                                 </div>
-                                <li><NavLink onClick={() => setIsOpen(false)} to="/eventInfo/create-event" className="block px-3 py-2">Create Event</NavLink></li>
-                                <li><NavLink onClick={() => setIsOpen(false)} to="/eventInfo/myBookings" className="block px-3 py-2">My Bookings</NavLink></li>
-                                <li><NavLink onClick={() => setIsOpen(false)} to="/eventInfo/manageEvents" className="block px-3 py-2">Manage Events</NavLink></li>
-                                <li><button onClick={handleLogout} className="w-full text-left px-3 py-2 cursor-pointer">Logout</button></li>
+                                <li><NavLink onClick={() => setIsOpen(false)} to="/eventInfo/create-event" className=" flex gap-2 px-3 py-2"><Plus></Plus>Create Event</NavLink></li>
+                                <li><NavLink onClick={() => setIsOpen(false)} to="/eventInfo/myBookings" className="flex gap-2 px-3 py-2"><Calendar></Calendar>My Bookings</NavLink></li>
+                                <li><NavLink onClick={() => setIsOpen(false)} to="/eventInfo/manageEvents" className="flex gap-2 px-3 py-2"><Settings></Settings>Manage Events</NavLink></li>
+                                <li><button onClick={handleLogout} className="w-full flex gap-2 text-left px-3 py-2 cursor-pointer"><LogOut></LogOut>Logout</button></li>
                             </>
                         ) : (
                             <>
