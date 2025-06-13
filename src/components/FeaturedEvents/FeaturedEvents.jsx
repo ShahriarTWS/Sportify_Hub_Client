@@ -56,7 +56,7 @@ const FeaturedEvents = () => {
                                 <button
                                     className="btn btn-accent mt-auto py-2 rounded-md font-semibold hover:brightness-110 transition"
                                 >
-                                    <Link to={(`/events/${event._id}`)}>
+                                    <Link to={(`/eventInfo/events/${event._id}`)}>
                                     View Details
                                     </Link>
                                 </button>

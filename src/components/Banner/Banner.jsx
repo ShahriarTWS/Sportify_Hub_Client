@@ -63,7 +63,7 @@ const Banner = () => {
                                 <button
                                     className="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-full transition"
                                 >
-                                    <Link to={(`/events/${event._id}`)}>
+                                    <Link to={(`/eventInfo/events/${event._id}`)}>
                                         View Details
                                     </Link>
                                 </button>

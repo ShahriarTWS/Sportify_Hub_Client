@@ -9,6 +9,7 @@ import CreateEvent from "../pages/Events/CreateEvent";
 import PrivateRoute from "../provider/PrivateRoute";
 import AllEvents from '../pages/Events/AllEvents';
 import EventsLayouts from "../pages/Events/EventsLayouts";
+import EventDetails from "../pages/Events/EventDetails";
 
 export const router = createBrowserRouter([
     {
@@ -33,19 +34,34 @@ export const router = createBrowserRouter([
                 path: '/auth/login',
                 element: <Login></Login>
             },
-            
+
         ])
     },
     {
         path: '/events',
-        element: <EventsLayouts></EventsLayouts>,
+        element: <Events></Events>,
         children: ([
             { index: true, element: <AllEvents></AllEvents> },
+        ])
+
+    },
+    {
+        path: '/eventInfo',
+        element: <EventsLayouts></EventsLayouts>,
+        children: ([
+            // { index: true, element: <AllEvents></AllEvents> },
             {
-                path: '/events/create-event',
+                path: '/eventInfo/create-event',
                 element: <PrivateRoute>
                     <CreateEvent></CreateEvent>
                 </PrivateRoute>
+            },
+            {
+                path: '/eventInfo/events/:id',
+                element: <PrivateRoute>
+                    <EventDetails></EventDetails>
+                </PrivateRoute>
+
             }
         ])
     },

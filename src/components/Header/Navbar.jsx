@@ -63,7 +63,7 @@ const Navbar = () => {
                                 {/* Dropdown Menu */}
                                 {showProfileMenu && (
                                     <div className=" absolute -right-50 mt-2 w-48 bg-white text-gray-800 rounded-md shadow-lg ">
-                                        <Link to="/create-event" onClick={() => setShowProfileMenu(false)} className="flex items-center px-4 py-2 text-sm hover:bg-gray-100">
+                                        <Link to="/eventInfo/create-event" onClick={() => setShowProfileMenu(false)} className="flex items-center px-4 py-2 text-sm hover:bg-gray-100">
                                             <Plus className="h-4 w-4 mr-2" /> Create Event
                                         </Link>
                                         <Link to="/my-bookings" onClick={() => setShowProfileMenu(false)} className="flex items-center px-4 py-2 text-sm hover:bg-gray-100">
@@ -120,7 +120,7 @@ const Navbar = () => {
                                     />
                                     <span className="text-sm font-medium text-gray-900">{user.displayName}</span>
                                 </div>
-                                <li><Link to="/events/create-event" className="block px-3 py-2">Create Event</Link></li>
+                                <li><Link to="/eventInfo/create-event" className="block px-3 py-2">Create Event</Link></li>
                                 <li><Link to="/my-bookings" className="block px-3 py-2">My Bookings</Link></li>
                                 <li><Link to="/manage-events" className="block px-3 py-2">Manage Events</Link></li>
                                 <li><button onClick={handleLogout} className="w-full text-left px-3 py-2 cursor-pointer">Logout</button></li>

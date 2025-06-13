@@ -180,7 +180,7 @@ const Events = () => {
                                             By {event.creatorName || 'Admin'}
                                         </span>
                                         <Link
-                                            to={`/events/${event._id}`}
+                                            to={`/eventInfo/events/${event._id}`}
                                             className="bg-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors inline-flex items-center"
                                         >
                                             View Details

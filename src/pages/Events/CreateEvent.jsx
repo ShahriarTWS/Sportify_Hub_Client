@@ -2,6 +2,7 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import Swal from 'sweetalert2';
 import { useAuth } from '../../hooks/hooks';
+import axios from 'axios';
 
 const CreateEvent = () => {
     const { user } = useAuth();
@@ -11,14 +12,24 @@ const CreateEvent = () => {
         data.creatorName = user?.displayName || 'Unknown';
         data.creatorEmail = user?.email || 'Unknown';
 
+        axios.post('http://localhost:3000/events', data)
+            .then(result => {
+                console.log(result.data);
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Event Created!',
+                    timer: 1500,
+                    showConfirmButton: false
+                });
+            })
+            .catch(error => {
+                console.error('Error posting event:', error);
+            });
+
+
         console.table(data);
         console.log(data);
-        Swal.fire({
-            icon: 'success',
-            title: 'Event Created!',
-            timer: 1500,
-            showConfirmButton: false
-        });
+
         reset();
     };
 

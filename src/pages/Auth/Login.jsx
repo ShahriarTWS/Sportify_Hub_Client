@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router';
+import { Link, useLocation, useNavigate } from 'react-router';
 import Lottie from 'lottie-react';
 import Swal from 'sweetalert2';
 import { Lock, Mail } from 'lucide-react';
@@ -11,6 +11,8 @@ const Login = () => {
     const [showPassword, setShowPassword] = useState(false);
     const { signIn, loginWithGoogle, setError, provider } = useAuth();
     const navigate = useNavigate();
+    const location = useLocation();
+
 
     const handleLogin = (e) => {
         e.preventDefault();
