@@ -63,6 +63,7 @@
 /* Active link style */
 a.active {
   @apply bg-base-200 text-primary;
+  @apply underline underline-offset-4
 }
 
 /* Example: root container to test */
