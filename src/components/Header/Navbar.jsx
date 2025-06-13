@@ -120,9 +120,9 @@ const Navbar = () => {
                                     />
                                     <span className="text-sm font-medium text-gray-900">{user.displayName}</span>
                                 </div>
-                                <li><Link to="/eventInfo/create-event" className="block px-3 py-2">Create Event</Link></li>
-                                <li><Link to="/my-bookings" className="block px-3 py-2">My Bookings</Link></li>
-                                <li><Link to="/manage-events" className="block px-3 py-2">Manage Events</Link></li>
+                                <li><NavLink onClick={() => setIsOpen(false)} to="/eventInfo/create-event" className="block px-3 py-2">Create Event</NavLink></li>
+                                <li><NavLink onClick={() => setIsOpen(false)} to="/eventInfo/myBookings" className="block px-3 py-2">My Bookings</NavLink></li>
+                                <li><NavLink onClick={() => setIsOpen(false)} to="/eventInfo/manageEvents" className="block px-3 py-2">Manage Events</NavLink></li>
                                 <li><button onClick={handleLogout} className="w-full text-left px-3 py-2 cursor-pointer">Logout</button></li>
                             </>
                         ) : (

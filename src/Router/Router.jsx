@@ -10,6 +10,9 @@ import PrivateRoute from "../provider/PrivateRoute";
 import AllEvents from '../pages/Events/AllEvents';
 import EventsLayouts from "../pages/Events/EventsLayouts";
 import EventDetails from "../pages/Events/EventDetails";
+import ManageEvents from "../pages/Events/ManageEvents";
+import MyBookings from "../pages/Events/MyBookings";
+import UpdateEvent from "../pages/Events/UpdateEvent";
 
 export const router = createBrowserRouter([
     {
@@ -62,6 +65,24 @@ export const router = createBrowserRouter([
                     <EventDetails></EventDetails>
                 </PrivateRoute>
 
+            },
+            {
+                path: '/eventInfo/manageEvents',
+                element: <PrivateRoute>
+                    <ManageEvents></ManageEvents>
+                </PrivateRoute>
+            },
+            {
+                path: '/eventInfo/myBookings',
+                element: <PrivateRoute>
+                    <MyBookings></MyBookings>
+                </PrivateRoute>
+            },
+            {
+                path: '/eventInfo/updateEvent/:id',
+                element: <PrivateRoute>
+                    <UpdateEvent></UpdateEvent>
+                </PrivateRoute>
             }
         ])
     },
