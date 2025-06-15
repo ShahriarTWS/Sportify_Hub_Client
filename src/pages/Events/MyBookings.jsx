@@ -9,27 +9,41 @@ const MyBookings = () => {
     const [bookings, setBookings] = useState([]);
     // const [loading, setLoading] = useState(true);
     const [isTableView, setIsTableView] = useState(true); // toggle state
-
+    console.log('Sending token:', user?.accessToken);
     // Fetch bookings
     useEffect(() => {
-        if (!user) {
-            setLoading(false);
-            return;
-        }
         const fetchBookings = async () => {
+            if (!user) {
+                setLoading(false);
+                return;
+            }
+
             try {
-                const res = await fetch(`http://localhost:3000/bookings?user_email=${user.email}`);
+                const res = await fetch(`http://localhost:3000/bookings?user_email=${user.email}`, {
+                    headers: {
+                        authorization: `Bearer ${user?.accessToken || ''}`
+                    }
+
+                });
+
+
+                if (!res.ok) {
+                    throw new Error(`HTTP error! status: ${res.status}`);
+                }
+
                 const data = await res.json();
                 setBookings(data);
             } catch (error) {
                 console.error('Error fetching bookings:', error);
-                Swal.fire('Error', 'Failed to load bookings.', 'error');
             } finally {
                 setLoading(false);
             }
         };
+
         fetchBookings();
     }, [user]);
+
+
 
     // Delete booking
     const handleDelete = async (bookingId) => {
@@ -67,7 +81,7 @@ const MyBookings = () => {
     }
 
     if (bookings.length === 0) {
-        return <p className="text-center mt-20 text-gray-500 font-medium">You have no bookings yet.</p>;
+        return <p className="text-center h-[50vh] my-20 text-gray-500 font-medium">You have no bookings yet.</p>;
     }
 
     return (

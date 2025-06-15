@@ -7,7 +7,7 @@ const FeaturedEvents = () => {
     const [events, setEvents] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:3000/events")
+        fetch("http://localhost:3000/all-events")
             .then((res) => res.json())
             .then((data) => {
                 setEvents(data);
@@ -22,11 +22,11 @@ const FeaturedEvents = () => {
         <div className="bg-primary">
             <section className="max-w-7xl mx-auto px-4 py-12">
                 <motion.h2
-                    className="text-3xl font-bold text-base-100 mb-8 text-center"
+                    className="text-3xl font-bold text-base-100 mb-8 text-center "
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6 }}
-                    viewport={{ once: false, amount: 0.3 }}
+                    transition={{ duration: 0.3 }}
+                    viewport={{ once: false, amount: 0.2 }}
                 >
                     Featured Events
                 </motion.h2>

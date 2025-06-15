@@ -18,7 +18,10 @@ const ManageEvents = () => {
         const fetchEvents = async () => {
             try {
                 const res = await axios.get(`http://localhost:3000/events`, {
-                    params: { creatorEmail: user.email }
+                    params: { creatorEmail: user.email },
+                    headers: {
+                        authorization: `Bearer ${user?.accessToken || ''}`
+                    }
                 });
                 setEvents(res.data);
             } catch (error) {
@@ -77,7 +80,7 @@ const ManageEvents = () => {
             </div>
 
             {events.length === 0 ? (
-                <p className="text-center text-gray-600">You haven’t created any events yet.</p>
+                <p className="text-center h-[50vh] text-gray-600">You haven’t created any events yet.</p>
             ) : (
                 <>
                     {/* Desktop Table */}

@@ -1,6 +1,7 @@
 import React from 'react';
 import { CalendarCheck, ClipboardPlus, Users } from 'lucide-react';
 import { motion } from 'framer-motion';
+import BlurText from '../../assets/animation/BlurText';
 
 const HowSportifyHubWorks = () => {
     const steps = [
@@ -30,9 +31,16 @@ const HowSportifyHubWorks = () => {
                 viewport={{ once: false, amount: 0.3 }}
                 className="max-w-7xl mx-auto text-center"
             >
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+                {/* <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
                     How Sportify-Hub Works
-                </h2>
+                </h2> */}
+                <BlurText
+                    text='How Sportify-Hub Works'
+                    delay={150}
+                    animateBy="words"
+                    direction="top"
+                    className="text-3xl md:text-4xl font-bold text-gray-800 mb-6 flex justify-center"
+                />
                 <p className="text-gray-600 max-w-2xl mx-auto mb-12">
                     Whether you're an athlete or an organizer, our platform makes it easy to connect, compete, and grow.
                 </p>

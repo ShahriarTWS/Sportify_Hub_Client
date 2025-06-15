@@ -13,6 +13,7 @@ import EventDetails from "../pages/Events/EventDetails";
 import ManageEvents from "../pages/Events/ManageEvents";
 import MyBookings from "../pages/Events/MyBookings";
 import UpdateEvent from "../pages/Events/UpdateEvent";
+import ErrorPage from "../pages/ErrorPage/ErrorPage";
 
 export const router = createBrowserRouter([
     {
@@ -88,6 +89,6 @@ export const router = createBrowserRouter([
     },
     {
         path: '*',
-        element: <h1>Error Page</h1>
+        element: <ErrorPage></ErrorPage>
     }
 ])

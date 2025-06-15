@@ -16,7 +16,7 @@ const Events = () => {
     useEffect(() => {
         const fetchEvents = async () => {
             try {
-                const res = await fetch('http://localhost:3000/events');
+                const res = await fetch('http://localhost:3000/all-events');
                 const data = await res.json();
                 const sorted = data.sort((a, b) => new Date(a.date) - new Date(b.date));
                 setEvents(sorted);
@@ -136,7 +136,7 @@ const Events = () => {
                     >
                         {filteredEvents.map((event) => (
                             <motion.div
-                                key={event.id}
+                                key={event._id}
                                 variants={{
                                     hidden: { opacity: 0, y: 20 },
                                     visible: { opacity: 1, y: 0 },

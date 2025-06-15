@@ -5,6 +5,7 @@ import Footer from '../../components/Footer/Footer';
 import FeaturedEvents from '../../components/FeaturedEvents/FeaturedEvents';
 import HowSportifyHubWorks from '../../components/ExtraSection/HowSportifyHubWorks';
 import TopCategories from '../../components/ExtraSection/TopCategories';
+import WhatPeopleSay from '../../components/ExtraSection/WhatPeopleSay';
 
 const Home = () => {
     return (
@@ -22,6 +23,7 @@ const Home = () => {
             <FeaturedEvents></FeaturedEvents>
             <HowSportifyHubWorks></HowSportifyHubWorks>
             <TopCategories></TopCategories>
+            <WhatPeopleSay></WhatPeopleSay>
           </main>
 
           <footer>

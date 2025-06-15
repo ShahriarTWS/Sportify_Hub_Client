@@ -27,7 +27,7 @@ const Navbar = () => {
             </li>
             <li>
                 <NavLink to="/events" className="block px-3 py-2 hover:text-blue-600 hover:bg-gray-50 rounded-md">
-                    Events
+                   All Events
                 </NavLink>
             </li>
         </>
