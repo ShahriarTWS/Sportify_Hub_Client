@@ -21,7 +21,8 @@ const ManageEvents = () => {
                     params: { creatorEmail: user.email },
                     headers: {
                         authorization: `Bearer ${user?.accessToken || ''}`
-                    }
+                    },
+                    withCredentials: true
                 });
                 setEvents(res.data);
             } catch (error) {

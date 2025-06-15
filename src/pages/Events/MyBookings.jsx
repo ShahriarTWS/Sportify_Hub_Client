@@ -22,7 +22,8 @@ const MyBookings = () => {
                 const res = await fetch(`http://localhost:3000/bookings?user_email=${user.email}`, {
                     headers: {
                         authorization: `Bearer ${user?.accessToken || ''}`
-                    }
+                    },
+                    credentials: 'include'
 
                 });
 

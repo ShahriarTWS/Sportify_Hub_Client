@@ -6,7 +6,7 @@ import { app } from "../firebase/firebase.config";
 export const AuthContext = createContext();
 
 const auth = getAuth(app);
- const provider = new GoogleAuthProvider();
+const provider = new GoogleAuthProvider();
 
 
 const AuthProvider = ({ children }) => {
@@ -45,15 +45,27 @@ const AuthProvider = ({ children }) => {
     }
 
     useEffect(() => {
-        const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+        const unsubscribe = onAuthStateChanged(auth, async (currentUser) => {
             setUser(currentUser);
-            console.log('user in auth state', currentUser);
+
+            if (currentUser) {
+                // get Firebase ID token here
+                const firebaseToken = await currentUser.getIdToken();
+
+                // send token to backend login route to set cookie
+                fetch('http://localhost:3000/login', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    credentials: 'include',
+                    body: JSON.stringify({ token: firebaseToken }),
+                });
+            }
+
             setLoading(false);
         });
-        return () => {
-            unsubscribe();
-        }
-    }, [])
+        return () => unsubscribe();
+    }, []);
+
 
     const updateUser = (updateData) => {
         return updateProfile(auth.currentUser, updateData);
