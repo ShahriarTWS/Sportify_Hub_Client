@@ -14,6 +14,7 @@ import ManageEvents from "../pages/Events/ManageEvents";
 import MyBookings from "../pages/Events/MyBookings";
 import UpdateEvent from "../pages/Events/UpdateEvent";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
+import AboutUs from "../pages/AboutUs/AboutUs";
 
 export const router = createBrowserRouter([
     {
@@ -86,6 +87,10 @@ export const router = createBrowserRouter([
                 </PrivateRoute>
             }
         ])
+    },
+    {
+        path: '/about',
+        element: <AboutUs></AboutUs>
     },
     {
         path: '*',

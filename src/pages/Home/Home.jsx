@@ -6,31 +6,34 @@ import FeaturedEvents from '../../components/FeaturedEvents/FeaturedEvents';
 import HowSportifyHubWorks from '../../components/ExtraSection/HowSportifyHubWorks';
 import TopCategories from '../../components/ExtraSection/TopCategories';
 import WhatPeopleSay from '../../components/ExtraSection/WhatPeopleSay';
+import ScrollToTop from '../ScrollToTop/ScrollToTop';
 
 const Home = () => {
-    return (
-        <div>
-            <header className=" relative">
-                <div className='bg-primary sticky'>
-                    <section className=" top-0  w-full max-w-screen-xl mx-auto z-50">
-                    <Header />
-                </section>
-                </div>
-            </header>
+  return (
+    <div>
+      <title>SportifyHub || Home</title>
 
-          <main>
-            <Banner></Banner>
-            <FeaturedEvents></FeaturedEvents>
-            <HowSportifyHubWorks></HowSportifyHubWorks>
-            <TopCategories></TopCategories>
-            <WhatPeopleSay></WhatPeopleSay>
-          </main>
+      <ScrollToTop></ScrollToTop>
 
-          <footer>
-            <Footer></Footer>
-          </footer>
-        </div>
-    );
+      <header className="sticky top-0 z-50 bg-primary shadow-sm">
+        <section className="w-full max-w-screen-xl mx-auto">
+          <Header />
+        </section>
+      </header>
+
+      <main>
+        <Banner></Banner>
+        <FeaturedEvents></FeaturedEvents>
+        <HowSportifyHubWorks></HowSportifyHubWorks>
+        <TopCategories></TopCategories>
+        <WhatPeopleSay></WhatPeopleSay>
+      </main>
+
+      <footer>
+        <Footer></Footer>
+      </footer>
+    </div>
+  );
 };
 
 export default Home;

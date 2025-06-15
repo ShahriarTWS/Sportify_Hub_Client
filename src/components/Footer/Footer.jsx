@@ -1,6 +1,6 @@
 import React from 'react';
 import { Trophy, Mail, Phone, MapPin, Facebook, Twitter, Instagram } from 'lucide-react';
-import { Link } from 'react-router';
+import { Link, NavLink } from 'react-router';
 import sportifylogo from '../../assets/logo/sportifyLogo.png';
 
 const Footer = () => {
@@ -37,16 +37,13 @@ const Footer = () => {
                         <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
                         <ul className="space-y-2">
                             <li>
-                                <a href="/" className="text-gray-300 hover:text-white transition-colors">Home</a>
+                                <NavLink to={'/'} className="text-gray-300 hover:text-white transition-colors">Home</NavLink>
                             </li>
                             <li>
-                                <a href="/events" className="text-gray-300 hover:text-white transition-colors">Events</a>
+                                <NavLink to={'/events'} className="text-gray-300 hover:text-white transition-colors">Events</NavLink>
                             </li>
                             <li>
-                                <a href="/about" className="text-gray-300 hover:text-white transition-colors">About Us</a>
-                            </li>
-                            <li>
-                                <a href="/contact" className="text-gray-300 hover:text-white transition-colors">Contact</a>
+                                <NavLink to={'/about'} className="text-gray-300 hover:text-white transition-colors">About Us</NavLink>
                             </li>
                         </ul>
                     </div>
