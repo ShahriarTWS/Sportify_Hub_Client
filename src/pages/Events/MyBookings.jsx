@@ -87,6 +87,7 @@ const MyBookings = () => {
 
     return (
         <div className="max-w-7xl h-screen mx-auto px-4 sm:px-8 py-12">
+            <title>SportifyHub || My Bookings</title>
             <div className="flex justify-between items-center mb-6">
                 <h1 className="text-3xl font-bold">My Bookings</h1>
 

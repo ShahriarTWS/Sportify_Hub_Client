@@ -9,6 +9,8 @@ import runImg from '../../assets/svg/runIMG.svg';
 const AboutUs = () => {
     return (
         <div>
+
+            <title>SportifyHub || About Us</title>
             {/* Sticky Header */}
             <header className="sticky top-0 z-50 bg-primary shadow-sm">
                 <section className="w-full max-w-screen-xl mx-auto">

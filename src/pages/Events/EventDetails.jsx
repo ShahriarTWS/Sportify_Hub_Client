@@ -93,6 +93,7 @@ const EventDetails = () => {
 
     return (
         <div className="bg-gradient-to-b from-blue-50 to-white py-16 px-4 sm:px-8 lg:px-20">
+            <title>SportifyHub || Event Details</title>
             <motion.div
                 className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 bg-white rounded-3xl shadow-lg"
                 initial={{ opacity: 0, y: 30 }}

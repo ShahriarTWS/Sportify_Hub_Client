@@ -70,6 +70,7 @@ const ManageEvents = () => {
 
     return (
         <div className="max-w-6xl h-[70vh] mx-auto px-4 py-10">
+            <title>SportifyHub || Manage Events</title>
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-6">
                 <h2 className="text-3xl font-bold text-center sm:text-left">Manage Your Events</h2>
                 <button
