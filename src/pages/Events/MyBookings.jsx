@@ -3,13 +3,14 @@ import { useAuth } from '../../hooks/hooks';
 import Loading from '../../components/Loading';
 import Swal from 'sweetalert2';
 import { LayoutGrid, LayoutList } from 'lucide-react';
+import ScrollToTop from '../ScrollToTop/ScrollToTop';
 
 const MyBookings = () => {
     const { user, loading, setLoading } = useAuth();
     const [bookings, setBookings] = useState([]);
     // const [loading, setLoading] = useState(true);
     const [isTableView, setIsTableView] = useState(true); // toggle state
-    console.log('Sending token:', user?.accessToken);
+    // console.log('Sending token:', user?.accessToken);
     // Fetch bookings
     useEffect(() => {
         const fetchBookings = async () => {
@@ -86,8 +87,9 @@ const MyBookings = () => {
     }
 
     return (
-        <div className="max-w-7xl h-screen mx-auto px-4 sm:px-8 py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-8 py-12">
             <title>SportifyHub || My Bookings</title>
+            <ScrollToTop></ScrollToTop>
             <div className="flex justify-between items-center mb-6">
                 <h1 className="text-3xl font-bold">My Bookings</h1>
 

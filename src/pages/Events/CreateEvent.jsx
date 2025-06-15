@@ -3,10 +3,13 @@ import { useForm } from 'react-hook-form';
 import Swal from 'sweetalert2';
 import { useAuth } from '../../hooks/hooks';
 import axios from 'axios';
+import { useNavigate } from 'react-router';
+import ScrollToTop from '../ScrollToTop/ScrollToTop';
 
 const CreateEvent = () => {
   const { user } = useAuth();
   const { register, handleSubmit, reset } = useForm();
+  const navigate = useNavigate();
 
   const onSubmit = (data) => {
     data.creatorName = user?.displayName || 'Unknown';
@@ -14,13 +17,14 @@ const CreateEvent = () => {
 
     axios.post('https://sportify-hub-server-nine.vercel.app/events', data)
       .then(result => {
-        console.log(result.data);
+        // console.log(result.data);
         Swal.fire({
           icon: 'success',
           title: 'Event Created!',
           timer: 1500,
           showConfirmButton: false,
         });
+        navigate('eventInfo/manageEvents'),
         reset();
       })
       .catch(error => {
@@ -36,6 +40,7 @@ const CreateEvent = () => {
   return (
     <div className="min-h-screen bg-gradient-to-tr from-blue-50 to-white flex items-center justify-center px-6 py-16">
       <title>SportifyHub || Create Event</title>
+      <ScrollToTop></ScrollToTop>
       <div className="w-full max-w-4xl bg-white rounded-3xl shadow-lg p-10 sm:p-12">
         <h2 className="text-3xl font-extrabold text-center text-blue-700 mb-10">
           Create a New Event

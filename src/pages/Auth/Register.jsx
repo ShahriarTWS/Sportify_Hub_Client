@@ -42,7 +42,7 @@ const Register = () => {
                         })
                             .then(res => res.json())
                             .then(data => {
-                                console.log(data)
+                                // console.log(data)
                             });
 
                         navigate('/');
@@ -88,7 +88,7 @@ const Register = () => {
                         })
                             .then(res => res.json())
                             .then(data => {
-                                console.log(data)
+                                // console.log(data)
                             });
 
                         navigate('/');

@@ -5,12 +5,14 @@ import Footer from '../../components/Footer/Footer';
 import bikeImg from '../../assets/svg/bike-rideIMG.svg';
 import jumpImg from '../../assets/svg/jumpIMG.svg';
 import runImg from '../../assets/svg/runIMG.svg';
+import ScrollToTop from '../ScrollToTop/ScrollToTop';
 
 const AboutUs = () => {
     return (
         <div>
 
             <title>SportifyHub || About Us</title>
+            <ScrollToTop></ScrollToTop>
             {/* Sticky Header */}
             <header className="sticky top-0 z-50 bg-primary shadow-sm">
                 <section className="w-full max-w-screen-xl mx-auto">

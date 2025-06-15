@@ -3,6 +3,7 @@ import { Link } from 'react-router';
 import { Calendar, MapPin, Search, Filter, ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 import Loading from '../../components/Loading';
+import ScrollToTop from '../ScrollToTop/ScrollToTop';
 
 const Events = () => {
     const [events, setEvents] = useState([]);
@@ -61,6 +62,7 @@ const Events = () => {
             transition={{ duration: 0.5 }}
         >
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <ScrollToTop></ScrollToTop>
                 <title>SportifyHub || All Events</title>
                 {/* Header */}
                 <div className="text-center mb-8">

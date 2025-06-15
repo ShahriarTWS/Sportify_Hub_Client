@@ -5,6 +5,7 @@ import Loading from '../../components/Loading';
 import { useAuth } from '../../hooks/hooks';
 import { Pencil, Trash2, Plus } from 'lucide-react';
 import axios from 'axios';
+import ScrollToTop from '../ScrollToTop/ScrollToTop';
 
 const ManageEvents = () => {
     const { user } = useAuth();
@@ -69,8 +70,9 @@ const ManageEvents = () => {
     if (loading) return <Loading />;
 
     return (
-        <div className="max-w-6xl h-[70vh] mx-auto px-4 py-10">
+        <div className="max-w-6xl  mx-auto px-4 py-10">
             <title>SportifyHub || Manage Events</title>
+            <ScrollToTop></ScrollToTop>
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-6">
                 <h2 className="text-3xl font-bold text-center sm:text-left">Manage Your Events</h2>
                 <button

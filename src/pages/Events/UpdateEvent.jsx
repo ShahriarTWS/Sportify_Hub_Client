@@ -5,6 +5,7 @@ import Swal from 'sweetalert2';
 import { useForm } from 'react-hook-form';
 import { useAuth } from '../../hooks/hooks';
 import Loading from '../../components/Loading';
+import ScrollToTop from '../ScrollToTop/ScrollToTop';
 
 const UpdateEvent = () => {
   const { id } = useParams();
@@ -69,6 +70,7 @@ const UpdateEvent = () => {
   return (
     <div className="min-h-screen bg-gradient-to-tr from-blue-50 to-white flex items-center justify-center px-6 py-16">
       <title>SportifyHub || Update Events</title>
+      <ScrollToTop></ScrollToTop>
       <div className="w-full max-w-4xl bg-white rounded-3xl shadow-lg p-10 sm:p-12">
         <h2 className="text-3xl font-extrabold text-center text-blue-700 mb-10">
           Update Event

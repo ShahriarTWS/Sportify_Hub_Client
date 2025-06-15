@@ -15,7 +15,7 @@ const Banner = () => {
             .then(res => res.json())
             .then(data => {
                 setUpcomingEvents(data);
-                console.log(data);
+                // console.log(data);
             })
     }, [])
 

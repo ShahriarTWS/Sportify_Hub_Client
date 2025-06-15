@@ -5,6 +5,7 @@ import sportifylogo from '../../assets/logo/sportifyLogo.png';
 import { useAuth } from '../../hooks/hooks';
 import { motion } from 'framer-motion';
 import Loading from '../Loading';
+import ScrollToTop from '../../pages/ScrollToTop/ScrollToTop';
 
 const Navbar = () => {
 
@@ -14,7 +15,9 @@ const Navbar = () => {
 
     const handleLogout = () => {
         logOut()
-            .then(() => console.log('Logged out'))
+            .then(() => {
+
+            })
             .catch(console.error);
     };
 
@@ -27,7 +30,7 @@ const Navbar = () => {
             </li>
             <li>
                 <NavLink to="/events" className="block px-3 py-2 hover:text-blue-600 hover:bg-gray-50 rounded-md">
-                   All Events
+                    All Events
                 </NavLink>
             </li>
         </>
@@ -36,6 +39,7 @@ const Navbar = () => {
 
     return (
         <nav className=" top-0 ">
+            <ScrollToTop></ScrollToTop>
             <div className="max-w-7xl mx-auto px-4 md:px-4">
                 <div className="flex justify-between h-14 items-center relative">
                     <Link to="/" className="flex items-center space-x-2">

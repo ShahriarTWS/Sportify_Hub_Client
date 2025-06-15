@@ -28,7 +28,7 @@ const Login = () => {
                     showConfirmButton: false,
                     timer: 1500
                 });
-                navigate(`${location.state ? location.state : '/'}`);
+                navigate(location.state ? location.state : '/', { replace: true });
             })
             .catch((error) => {
                 setError(error.code);
@@ -50,7 +50,7 @@ const Login = () => {
                     showConfirmButton: false,
                     timer: 1500
                 });
-                navigate(`${location.state ? location.state : '/'}`);
+                navigate(location.state ? location.state : '/', { replace: true });
             })
             .catch((error) => {
                 setError(error.code || 'Google login failed');
