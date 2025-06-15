@@ -18,7 +18,7 @@ const UpdateEvent = () => {
   useEffect(() => {
     const fetchEvent = async () => {
       try {
-        const res = await axios.get(`http://localhost:3000/events/${id}`);
+        const res = await axios.get(`https://sportify-hub-server-nine.vercel.app/events/${id}`);
         const event = res.data;
         // console.log(event);
 
@@ -46,7 +46,7 @@ const UpdateEvent = () => {
       data.creatorName = user?.displayName || 'Unknown';
       data.creatorEmail = user?.email || 'Unknown';
 
-      await axios.put(`http://localhost:3000/events/${id}`, data);
+      await axios.put(`https://sportify-hub-server-nine.vercel.app/events/${id}`, data);
       Swal.fire({
         icon: 'success',
         title: 'Event updated successfully!',
@@ -158,8 +158,8 @@ const UpdateEvent = () => {
                 Event Picture URL
               </label>
               <input
-                {...register('image', { 
-                  required: 'Image URL is required', 
+                {...register('image', {
+                  required: 'Image URL is required',
                   pattern: {
                     value: /^(https?:\/\/.*\.(?:png|jpg|jpeg|gif|svg|webp))/i,
                     message: 'Enter a valid image URL',

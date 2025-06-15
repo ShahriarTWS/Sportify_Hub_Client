@@ -12,7 +12,7 @@ const CreateEvent = () => {
     data.creatorName = user?.displayName || 'Unknown';
     data.creatorEmail = user?.email || 'Unknown';
 
-    axios.post('http://localhost:3000/events', data)
+    axios.post('https://sportify-hub-server-nine.vercel.app/events', data)
       .then(result => {
         console.log(result.data);
         Swal.fire({

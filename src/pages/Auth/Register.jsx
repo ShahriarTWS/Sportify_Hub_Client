@@ -33,7 +33,7 @@ const Register = () => {
                             timer: 1500,
                         });
 
-                        fetch('http://localhost:3000//users', {
+                        fetch('https://sportify-hub-server-nine.vercel.app//users', {
                             method: 'POST',
                             headers: {
                                 'content-type': 'application/json'
@@ -79,7 +79,7 @@ const Register = () => {
                             timer: 1500,
                         });
 
-                        fetch('http://localhost:3000//users', {
+                        fetch('https://sportify-hub-server-nine.vercel.app//users', {
                             method: 'POST',
                             headers: {
                                 'content-type': 'application/json'

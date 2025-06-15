@@ -17,7 +17,7 @@ const ManageEvents = () => {
 
         const fetchEvents = async () => {
             try {
-                const res = await axios.get(`http://localhost:3000/events`, {
+                const res = await axios.get(`https://sportify-hub-server-nine.vercel.app/events`, {
                     params: { creatorEmail: user.email },
                     headers: {
                         authorization: `Bearer ${user?.accessToken || ''}`
@@ -49,7 +49,7 @@ const ManageEvents = () => {
         if (!confirm.isConfirmed) return;
 
         try {
-            await axios.delete(`http://localhost:3000/events/${id}`);
+            await axios.delete(`https://sportify-hub-server-nine.vercel.app/events/${id}`);
             setEvents(events.filter((e) => e._id !== id));
             Swal.fire('Deleted!', 'The event has been deleted.', 'success');
         } catch (error) {

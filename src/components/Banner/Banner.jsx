@@ -11,7 +11,7 @@ const Banner = () => {
     const [upcomingEvents, setUpcomingEvents] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:3000/all-events',)
+        fetch('https://sportify-hub-server-nine.vercel.app/all-events',)
             .then(res => res.json())
             .then(data => {
                 setUpcomingEvents(data);

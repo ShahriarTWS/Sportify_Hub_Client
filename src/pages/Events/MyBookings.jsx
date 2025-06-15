@@ -19,7 +19,7 @@ const MyBookings = () => {
             }
 
             try {
-                const res = await fetch(`http://localhost:3000/bookings?user_email=${user.email}`, {
+                const res = await fetch(`https://sportify-hub-server-nine.vercel.app/bookings?user_email=${user.email}`, {
                     headers: {
                         authorization: `Bearer ${user?.accessToken || ''}`
                     },
@@ -59,7 +59,7 @@ const MyBookings = () => {
         if (!confirm.isConfirmed) return;
 
         try {
-            const res = await fetch(`http://localhost:3000/bookings/${bookingId}`, {
+            const res = await fetch(`https://sportify-hub-server-nine.vercel.app/bookings/${bookingId}`, {
                 method: 'DELETE',
             });
 
@@ -80,7 +80,7 @@ const MyBookings = () => {
     if (!user) {
         return <p className="text-center mt-20 text-red-600 font-semibold">Please login to see your bookings.</p>;
     }
-
+    if (loading) return <Loading />;
     if (bookings.length === 0) {
         return <p className="text-center h-[50vh] my-20 text-gray-500 font-medium">You have no bookings yet.</p>;
     }
