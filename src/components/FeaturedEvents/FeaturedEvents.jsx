@@ -1,22 +1,36 @@
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router"; // corrected router import
 import { motion } from "framer-motion";
+import { useAuth } from "../../hooks/hooks";
 
 const FeaturedEvents = () => {
     const navigate = useNavigate();
     const [events, setEvents] = useState([]);
+    const { loading, setLoading } = useAuth();
 
     useEffect(() => {
         fetch("https://sportify-hub-server-nine.vercel.app/all-events")
             .then((res) => res.json())
             .then((data) => {
                 setEvents(data);
+                setLoading(false);
             });
     }, []);
 
     const sortedEvents = [...events]
         .sort((a, b) => new Date(a.date) - new Date(b.date))
         .slice(0, 6);
+
+    if (loading) {
+        return (
+            <div className="flex w-52 flex-col gap-4 mx-auto">
+                <div className="skeleton h-32 w-full"></div>
+                <div className="skeleton h-4 w-28"></div>
+                <div className="skeleton h-4 w-full"></div>
+                <div className="skeleton h-4 w-full"></div>
+            </div>
+        );
+    }
 
     return (
         <div className="bg-primary">

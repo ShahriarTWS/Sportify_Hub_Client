@@ -5,17 +5,20 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { Link } from 'react-router';
+import { useAuth } from '../../hooks/hooks';
+import Loading from '../Loading';
 
 const Banner = () => {
 
     const [upcomingEvents, setUpcomingEvents] = useState([])
-
+    const { loading, setLoading } = useAuth()
     useEffect(() => {
         fetch('https://sportify-hub-server-nine.vercel.app/all-events',)
             .then(res => res.json())
             .then(data => {
                 setUpcomingEvents(data);
                 // console.log(data);
+                setLoading(false);
             })
     }, [])
 
@@ -23,6 +26,12 @@ const Banner = () => {
     const sortedEvents = [...upcomingEvents]
         .sort((a, b) => new Date(a.date) - new Date(b.date))
         .slice(0, 3);
+
+    if (loading) {
+        return (
+            <Loading></Loading>
+        );
+    }
 
     return (
         <div className="h-[90vh]">
