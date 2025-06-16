@@ -1,7 +1,7 @@
 # 🎯 Sportify Hub
 
-**Live URL:** [https://your-live-url.com](https://your-live-url.com)  
-*(Replace with your actual deployed URL)*
+**Live URL:** [https://sportifyhub.web.app/](https://sportifyhub.web.app/)  
+
 
 ## 🚀 Project Purpose
 
