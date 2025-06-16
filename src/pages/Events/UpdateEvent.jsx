@@ -47,7 +47,11 @@ const UpdateEvent = () => {
       data.creatorName = user?.displayName || 'Unknown';
       data.creatorEmail = user?.email || 'Unknown';
 
-      await axios.put(`https://sportify-hub-server-nine.vercel.app/events/${id}`, data);
+      await axios.put(`https://sportify-hub-server-nine.vercel.app/events/${id}`, data, {
+        headers: {
+          authorization: `Bearer ${user?.accessToken || ''}`
+        },
+      });
       Swal.fire({
         icon: 'success',
         title: 'Event updated successfully!',

@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { FaRunning, FaSwimmer, FaHiking, FaFutbol } from "react-icons/fa";
 import { MdOutlineSportsKabaddi } from "react-icons/md";
+import ScrollToTop from "../../pages/ScrollToTop/ScrollToTop";
 
 const categories = [
     {
@@ -34,6 +35,7 @@ const categories = [
 const TopCategories = () => {
     return (
         <section className="bg-base-100 py-16 px-4">
+            <ScrollToTop></ScrollToTop>
             <motion.h2
                 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6 text-center"
                 initial={{ opacity: 0, y: 20 }}

@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import ScrollToTop from "../../pages/ScrollToTop/ScrollToTop";
 
 const testimonials = [
     {
@@ -41,6 +42,7 @@ const fadeUp = {
 const WhatPeopleSay = () => {
     return (
         <section className="bg-white py-16 px-4 max-w-7xl mx-auto">
+            <ScrollToTop></ScrollToTop>
             <h2 className="text-3xl font-bold text-center mb-12 text-primary">What People Say</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
                 {testimonials.map((testimonial, index) => (

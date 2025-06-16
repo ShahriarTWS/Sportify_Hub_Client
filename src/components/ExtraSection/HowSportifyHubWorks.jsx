@@ -2,6 +2,7 @@ import React from 'react';
 import { CalendarCheck, ClipboardPlus, Users } from 'lucide-react';
 import { motion } from 'framer-motion';
 import BlurText from '../../assets/animation/BlurText';
+import ScrollToTop from '../../pages/ScrollToTop/ScrollToTop';
 
 const HowSportifyHubWorks = () => {
     const steps = [
@@ -24,6 +25,7 @@ const HowSportifyHubWorks = () => {
 
     return (
         <div className="bg-gray-50 py-16 px-4 md:px-8">
+            <ScrollToTop></ScrollToTop>
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}

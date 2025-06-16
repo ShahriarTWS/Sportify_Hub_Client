@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router"; // corrected router import
 import { motion } from "framer-motion";
 import { useAuth } from "../../hooks/hooks";
+import ScrollToTop from "../../pages/ScrollToTop/ScrollToTop";
 
 const FeaturedEvents = () => {
     const navigate = useNavigate();
@@ -34,13 +35,17 @@ const FeaturedEvents = () => {
 
     return (
         <div className="bg-primary">
+            <ScrollToTop></ScrollToTop>
             <section className="max-w-7xl mx-auto px-4 py-12">
                 <motion.h2
                     className="text-3xl font-bold text-base-100 mb-8 text-center "
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.3 }}
-                    viewport={{ once: false, amount: 0.2 }}
+                    // initial={{ opacity: 0, y: 10 }}
+                    // whileInView={{ opacity: 1, y: 0 }}
+                    // transition={{ duration: 0.3 }}
+                    // viewport={{ once: false, amount: 0.2 }}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.5 }}
                 >
                     Featured Events
                 </motion.h2>
@@ -50,10 +55,10 @@ const FeaturedEvents = () => {
                         <motion.div
                             key={event._id}
                             className="bg-base-100 rounded-lg shadow-md overflow-hidden flex flex-col"
-                            initial={{ opacity: 0, y: 30 }}
+                            initial={{ opacity: 0, y: 10 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.3, delay: index * 0.1 }}
-                            viewport={{ once: false, amount: 0.2 }}
+                            transition={{ duration: 0.2, delay: index * 0.05 }}
+                            viewport={{ once: true, amount: 0.2 }}
                         >
                             <img
                                 src={event.image}

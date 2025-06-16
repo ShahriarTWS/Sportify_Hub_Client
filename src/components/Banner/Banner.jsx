@@ -7,6 +7,7 @@ import 'swiper/css/navigation';
 import { Link } from 'react-router';
 import { useAuth } from '../../hooks/hooks';
 import Loading from '../Loading';
+import ScrollToTop from '../../pages/ScrollToTop/ScrollToTop';
 
 const Banner = () => {
 
@@ -35,6 +36,7 @@ const Banner = () => {
 
     return (
         <div className="h-[90vh]">
+            <ScrollToTop></ScrollToTop>
             <Swiper
                 modules={[Autoplay, Pagination, Navigation]}
                 autoplay={{ delay: 5000, disableOnInteraction: false }}

@@ -11,31 +11,38 @@ const CreateEvent = () => {
   const { register, handleSubmit, reset } = useForm();
   const navigate = useNavigate();
 
-  const onSubmit = (data) => {
+  const onSubmit = async (data) => {
     data.creatorName = user?.displayName || 'Unknown';
     data.creatorEmail = user?.email || 'Unknown';
 
-    axios.post('https://sportify-hub-server-nine.vercel.app/events', data)
-      .then(result => {
-        // console.log(result.data);
-        Swal.fire({
-          icon: 'success',
-          title: 'Event Created!',
-          timer: 1500,
-          showConfirmButton: false,
-        });
-        navigate('eventInfo/manageEvents'),
-        reset();
-      })
-      .catch(error => {
-        console.error('Error posting event:', error);
-        Swal.fire({
-          icon: 'error',
-          title: 'Failed to create event',
-          text: error.message || 'Something went wrong',
-        });
+    try {
+      const token = await user.getIdToken();
+
+      const response = await axios.post('https://sportify-hub-server-nine.vercel.app/events', data, {
+        headers: {
+          authorization: `Bearer ${token}`,
+        },
       });
+
+      Swal.fire({
+        icon: 'success',
+        title: 'Event Created!',
+        timer: 1500,
+        showConfirmButton: false,
+      });
+
+      reset();
+      navigate('/eventInfo/manageEvents');
+    } catch (error) {
+      console.error('Error posting event:', error);
+      Swal.fire({
+        icon: 'error',
+        title: 'Failed to create event',
+        text: error.message || 'Something went wrong',
+      });
+    }
   };
+
 
   return (
     <div className="min-h-screen bg-gradient-to-tr from-blue-50 to-white flex items-center justify-center px-6 py-16">
