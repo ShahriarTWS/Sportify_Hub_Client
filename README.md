@@ -1,49 +1,118 @@
-# 🎯 Sportify Hub
+# 🎯 SportifyHub
 
-**Live URL:** [https://sportifyhub.web.app/](https://sportifyhub.web.app/)  
+**Live URL:** [https://sportifyhub.web.app/](https://sportifyhub.web.app/)
 
+---
 
 ## 🚀 Project Purpose
 
-**Sportify Hub** is a dynamic sports event platform where users can discover, create, and book upcoming sports events. It aims to provide a seamless, secure, and engaging experience for event organizers and sports enthusiasts with features like event management, real-time booking, and user authentication.
+**SportifyHub** is a sports event management platform that brings together athletes and event organizers in a seamless booking experience. Users can explore, host, and register for sports events, while admins manage the platform securely. Designed with interactivity, responsive UI, and real-time features, it supports a dynamic sports community.
+
+---
+
+## 🖼️ Screenshot
+
+![FreelancerPoint Screenshot](https://res.cloudinary.com/dwgj5fypm/image/upload/v1754632758/Screenshot_2025-08-08_115833_bwr87q.png)
 
 ---
 
 ## 🔑 Key Features
 
-- 🔐 **Firebase Authentication**: Secure sign-up, login, and token-based authorization.
-- 📅 **Event Management**: Create, update, delete, and browse sports events.
-- 🏃‍♂️ **Event Booking**: Users can book events with booking restrictions and confirmation.
-- 🔒 **JWT-Protected APIs**: Secure backend API endpoints with Firebase token verification.
-- 🎨 **Responsive UI**: Styled with Tailwind CSS, DaisyUI, and **Mamba UI Reactbits** for sleek React components.
-- 🎞️ **Animations & Interactions**: Smooth animations with Framer Motion and Lottie React.
-- 📋 **Form Handling**: Efficient form validation with React Hook Form.
-- 🔔 **User Feedback**: Alerts and notifications using SweetAlert2.
-- 🖼️ **Image Carousel**: Showcasing events with Swiper.
-- 🛠️ **Icon Support**: Icons via Lucide React and React Icons.
+- 🔐 **Firebase Authentication**: Secure login/signup using email-password and Google sign-in.
+- 📅 **Event Management:** Users can create, update, and delete sports events.
+- 🏃‍♂️ **Event Booking System:** Book events with restrictions and confirmation flows.
+
+- 🔒 **JWT-Protected APIs:** Firebase token verification secures all backend endpoints.
+
+- 🎨 **Responsive Design:** Mobile-first UI using Tailwind CSS and DaisyUI.
+
+- 🎞️ **Engaging Animations:** Integrated Lottie React and Framer Motion for smooth UI transitions.
+
+- 📋 **Form Validation:** User-friendly forms powered by React Hook Form.
+
+- 🔔 **Interactive Alerts:** SweetAlert2 for feedback and confirmations.
+
+- 🖼️ **Image Carousel:** Swiper integration for event highlights.
+
+- 🛠️ **Modern Icons:** Beautiful icon usage with Lucide and React Icons.
 
 ---
 
-## 🧩 NPM Packages Used
+## 🛠️ Technologies Used
 
-- [`@tailwindcss/vite`](https://www.npmjs.com/package/@tailwindcss/vite)
-- [`axios`](https://www.npmjs.com/package/axios)
-- [`dotenv`](https://www.npmjs.com/package/dotenv)
-- [`firebase`](https://www.npmjs.com/package/firebase)
-- [`framer-motion`](https://www.npmjs.com/package/framer-motion)
-- [`lottie-react`](https://www.npmjs.com/package/lottie-react)
-- [`lucide-react`](https://www.npmjs.com/package/lucide-react)
-- [`mamba-ui-reactbits`](https://www.npmjs.com/package/mamba-ui-reactbits)
+### Frontend
+
 - [`react`](https://www.npmjs.com/package/react)
-- [`react-dom`](https://www.npmjs.com/package/react-dom)
-- [`react-hook-form`](https://www.npmjs.com/package/react-hook-form)
-- [`react-icons`](https://www.npmjs.com/package/react-icons)
 - [`react-router`](https://www.npmjs.com/package/react-router)
-- [`sweetalert2`](https://www.npmjs.com/package/sweetalert2)
-- [`swiper`](https://www.npmjs.com/package/swiper)
+- [`firebase`](https://www.npmjs.com/package/firebase)
+- [`axios`](https://www.npmjs.com/package/axios)
 - [`tailwindcss`](https://www.npmjs.com/package/tailwindcss)
 - [`daisyui`](https://www.npmjs.com/package/daisyui)
+- [`sweetalert2`](https://www.npmjs.com/package/sweetalert2)
+- [`lottie-react`](https://www.npmjs.com/package/lottie-react)
+- [`react-icons`](https://www.npmjs.com/package/react-icons)
+- [`react-simple-typewriter`](https://www.npmjs.com/package/react-simple-typewriter)
+- [`swiper`](https://www.npmjs.com/package/swiper)
+- [`dotenv`](https://www.npmjs.com/package/dotenv)
+
+### Backend
+
+- Node.js
+- Express.js
+- MongoDB
+- JWT (JSON Web Token)
+- CORS & Dotenv
 
 ---
 
-> 💡 Built with ❤️ by Shahriar Nazim Joy.
+## ⚙️ How to Run the Project Locally
+
+### Prerequisites:
+- Node.js & npm installed
+- Firebase project setup
+- MongoDB URI
+
+### Client Setup:
+```bash
+git clone https://github.com/ShahriarTWS/Sportify_Hub_Client.git
+cd FreelancerPoint_Client
+npm install
+# Add your Firebase config to .env
+npm run dev
+```
+
+### Client Setup:
+```bash
+git clone https://github.com/ShahriarTWS/Sportify_Hub_Server.git
+cd FreelancerPoint_Server
+npm install
+# Add your Firebase config to .env
+nodemon index.js
+```
+
+---
+
+### 📁 Repositories
+- **Client:** [https://github.com/ShahriarTWS/Sportify_Hub_Client.git](https://github.com/ShahriarTWS/Sportify_Hub_Client.git)
+
+- **Client:** [https://github.com/ShahriarTWS/Sportify_Hub_Server.git](https://github.com/ShahriarTWS/Sportify_Hub_Server.git)
+
+---
+
+### 📌 Note
+This project was developed as part of my MERN stack learning journey. TutorHub gave me hands-on experience building a production-ready, full-featured app from scratch. Feedback is welcome!
+
+### 🧑‍💻 Author
+
+**Shahriar Nazim Joy**
+MERN Stack Developer (in learning stage)
+[`LinkedIn`](https://www.linkedin.com/in/snjoy420/) | [`Portfolio`](https://shahriar-dev.web.app/)
+
+---
+
+Let me know if you want:
+- A Markdown file download  
+- A Bengali version  
+- An additional section for future improvements or challenges faced during development.
+
+> 💡 Built with passion by Shahriar Nazim Joy.
