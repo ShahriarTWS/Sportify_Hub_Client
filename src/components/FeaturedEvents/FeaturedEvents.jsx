@@ -38,7 +38,7 @@ const FeaturedEvents = () => {
             <ScrollToTop></ScrollToTop>
             <section className="w-11/12 mx-auto py-12">
                 <motion.h2
-                    className="text-3xl font-bold mb-8 text-center "
+                    className="text-3xl md:text-4xl font-bold mb-3 text-center "
                     // initial={{ opacity: 0, y: 10 }}
                     // whileInView={{ opacity: 1, y: 0 }}
                     // transition={{ duration: 0.3 }}
@@ -49,6 +49,10 @@ const FeaturedEvents = () => {
                 >
                     Featured Events
                 </motion.h2>
+
+                <p className="text-gray-500 max-w-2xl mx-auto text-center mb-6">
+                    A spotlight on the most exciting upcoming sports and competitions you won’t want to miss.
+                </p>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {sortedEvents.map((event, index) => (
@@ -79,7 +83,7 @@ const FeaturedEvents = () => {
                                     })}
                                 </p>
                                 <p className="text-base mb-4">📍 {event.location}</p>
-                                <button className="btn bg-blue-600 mt-auto py-2 rounded-md font-semibold hover:brightness-110 transition text-base-100">
+                                <button className="btn bg-blue-600 mt-auto py-2 rounded-md font-semibold hover:brightness-110 transition text-white">
                                     <Link to={`/eventInfo/events/${event._id}`}>
                                         View Details
                                     </Link>

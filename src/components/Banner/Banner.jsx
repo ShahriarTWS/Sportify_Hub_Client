@@ -72,7 +72,7 @@ const Banner = () => {
                                         day: "numeric",
                                     })}
                                 </p>
-                                <p className="text-white px-2 md:px-0 mb-6">{event.description}</p>
+                                {/* <p className="text-white px-2 md:px-0 mb-6">{event.description}</p> */}
                                 <button
                                     className="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-full transition"
                                 >

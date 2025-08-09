@@ -45,7 +45,7 @@ const CreateEvent = () => {
 
 
   return (
-    <div className="min-h-screen bg-base-200 flex items-center justify-center px-6 py-16">
+    <div className="min-h-screen bg-base-200 flex items-center justify-center px-6 py-16 transition-all">
       <title>SportifyHub || Create Event</title>
       <ScrollToTop></ScrollToTop>
       <div className="w-full max-w-4xl bg-base-100 rounded-3xl shadow-lg p-10 sm:p-12">

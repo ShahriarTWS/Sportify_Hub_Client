@@ -54,7 +54,7 @@ const WhatPeopleSay = () => {
                 <ScrollToTop></ScrollToTop>
                 <h2 className="text-3xl font-bold text-center mb-3">What People Say</h2>
                 <p className="text-gray-500 max-w-2xl mx-auto mb-6 text-center">
-                    Whether you're an athlete or an organizer, our platform makes it easy to connect, compete, and grow.
+                    Hear real stories and experiences from our happy athletes and event organizers.
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-10 ">
                     {testimonials.map((testimonial, index) => (
@@ -65,7 +65,7 @@ const WhatPeopleSay = () => {
                             whileInView="visible"
                             viewport={{ once: true, amount: 0.2 }}
                             custom={index}
-                            className="bg-base-100 p-6 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition"
+                            className="bg-base-100 p-6 rounded-xl shadow-lg border border-primary/10 hover:scale-105 hover:shadow-xl transition-all"
                         >
                             <div className="flex items-center space-x-4 mb-4">
                                 <img
@@ -74,11 +74,11 @@ const WhatPeopleSay = () => {
                                     className="w-14 h-14 rounded-full object-cover border-2 border-blue-500"
                                 />
                                 <div>
-                                    <h4 className="text-lg font-semibold text-primary">{testimonial.name}</h4>
+                                    <h4 className="text-lg font-semibold">{testimonial.name}</h4>
                                     <p className="text-sm text-gray-500">{testimonial.role}</p>
                                 </div>
                             </div>
-                            <p className="text-gray-700 text-sm">{testimonial.text}</p>
+                            <p className=" text-sm">{testimonial.text}</p>
                         </motion.div>
                     ))}
                 </div>

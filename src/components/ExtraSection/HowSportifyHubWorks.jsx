@@ -49,7 +49,7 @@ const HowSportifyHubWorks = () => {
                     className="text-3xl md:text-4xl font-bold  mb-3 flex justify-center"
                 />
                 <p className="text-gray-500 max-w-2xl mx-auto mb-6">
-                    Whether you're an athlete or an organizer, our platform makes it easy to connect, compete, and grow.
+                    Your all-in-one platform to discover, join, and create sports events with ease
                 </p>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
@@ -60,7 +60,7 @@ const HowSportifyHubWorks = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ delay: index * 0.2, duration: 0.5 }}
                             viewport={{ once: false, amount: 0.3 }}
-                            className="bg-base-100 rounded-xl shadow-md p-6 flex flex-col items-center text-center hover:shadow-lg transition duration-300"
+                            className="bg-base-100 rounded-xl shadow-md p-6 flex flex-col items-center text-center hover:shadow-lg transition-all hover:scale-105 duration-300"
                         >
                             <div className="mb-4">{step.icon}</div>
                             <h3 className="text-lg font-semibold mb-2">{step.title}</h3>

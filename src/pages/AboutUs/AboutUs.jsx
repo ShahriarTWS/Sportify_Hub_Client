@@ -16,7 +16,7 @@ const AboutUs = () => {
             {/* Sticky Header */}
 
             {/* About Section */}
-            <section className="bg-base-200 py-16 md:px-16">
+            <section className="bg-base-200 py-16 ">
                 <div className="w-11/12 mx-auto">
                     {/* Title */}
                     <div className="text-center mb-12">
@@ -27,12 +27,12 @@ const AboutUs = () => {
                     </div>
 
                     {/* Main Grid */}
-                    <div className="grid md:grid-cols-2 gap-12 items-center">
+                    <div className="grid md:grid-cols-2 gap-12 ">
                         {/* Left Content */}
                         <div>
-                            <h3 className="text-2xl font-semibold mb-4 ">Who We Are</h3>
-                            <p className="text-gray-400 mb-6 leading-relaxed">
-                                Sportify Hub is your go-to platform for discovering, managing, and booking athletic events across the nation. We empower both organizers and participants to experience smooth, dynamic sports journeys — from planning to participation.
+                            <h3 className="text-3xl font-semibold mb-4 ">Who We Are</h3>
+                            <p className=" mb-6 leading-relaxed">
+                                Sportify Hub is your ultimate destination for everything related to athletic events across the country. We provide a comprehensive platform where athletes, sports enthusiasts, and event organizers can come together to discover, manage, and book a wide variety of sporting events. Our mission is to empower both organizers and participants by offering seamless tools and features that make the entire sports journey effortless and enjoyable — from the initial planning stages to the thrill of participation and competition. With Sportify Hub, you gain access to a vibrant, active community passionate about sports, ensuring you never miss an opportunity to compete, improve, and connect. Whether you're looking to host an event, find competitions to join, or simply stay updated with the latest athletic happenings, Sportify Hub is designed to enhance your sports experience with efficiency, transparency, and excitement.
                             </p>
 
                             <div className="space-y-6">
@@ -40,7 +40,7 @@ const AboutUs = () => {
                                     <Medal className="text-yellow-400 w-8 h-8 mt-1" />
                                     <div>
                                         <h4 className="font-semibold text-lg">Our Vision</h4>
-                                        <p className="text-gray-500">
+                                        <p className="">
                                             Build a connected and thriving sports ecosystem for all — players, fans, and organizers.
                                         </p>
                                     </div>
@@ -50,7 +50,7 @@ const AboutUs = () => {
                                     <CalendarDays className="text-blue-500 w-8 h-8 mt-1" />
                                     <div>
                                         <h4 className="font-semibold text-lg">Our Mission</h4>
-                                        <p className="text-gray-500">
+                                        <p className="">
                                             Make sports event booking seamless, inclusive, and tech-powered for everyone involved.
                                         </p>
                                     </div>
@@ -60,7 +60,7 @@ const AboutUs = () => {
                                     <UsersRound className="text-green-500 w-8 h-8 mt-1" />
                                     <div>
                                         <h4 className="font-semibold text-lg">Our Values</h4>
-                                        <ul className="list-disc ml-5 text-gray-500">
+                                        <ul className="list-disc ml-5 ">
                                             <li>Passion & Sportsmanship</li>
                                             <li>Fair Play & Inclusivity</li>
                                             <li>Community Collaboration</li>

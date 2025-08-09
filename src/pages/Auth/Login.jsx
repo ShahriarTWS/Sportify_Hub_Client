@@ -64,7 +64,7 @@ const Login = () => {
     };
 
     return (
-        <div className="min-h-screen bg-gray-50 flex flex-col md:flex-row items-center justify-center px-4 py-10">
+        <div className="min-h-screen bg-base-200 flex flex-col md:flex-row items-center justify-center px-4 py-10 ">
             <title>SportifyHub || Login</title>
 
             {/* Lottie Animation */}
@@ -73,8 +73,8 @@ const Login = () => {
             </div>
 
             {/* Login Form */}
-            <div className="w-full max-w-md bg-white shadow-md rounded-xl p-8 space-y-6">
-                <h2 className="text-3xl font-bold text-center text-gray-800">Login</h2>
+            <div className="w-full max-w-md bg-base-100 shadow-md rounded-xl p-8 space-y-6">
+                <h2 className="text-3xl font-bold text-center ">Login</h2>
 
                 <form onSubmit={handleLogin} className="space-y-4">
                     {/* Email Field */}
@@ -126,7 +126,7 @@ const Login = () => {
                 <div className="relative mt-2">
                     <button
                         onClick={handleGoogleLogin}
-                        className="w-full border flex items-center justify-center gap-2 py-2 rounded-md hover:bg-gray-100 transition"
+                        className="w-full border flex items-center justify-center gap-2 py-2 rounded-md hover:bg-base-200 transition"
                     >
                         <img
                             src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Google_Favicon_2025.svg/1024px-Google_Favicon_2025.svg.png"

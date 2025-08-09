@@ -279,14 +279,16 @@ const EventDetails = () => {
     }
 
     return (
-        <div className="bg-base-200 py-16 ">
+        <div className="bg-base-200 py-16 transition-all">
             <title>SportifyHub || Event Details</title>
             <ScrollToTop />
 
-            <h1 className="text-4xl font-extrabold text-center mb-12">
+            <h1 className="text-4xl font-extrabold text-center mb-3">
                 Event Details
             </h1>
-
+            <p className="text-gray-500 max-w-2xl mx-auto mb-6 text-center">
+                Get all the essential information about the event including date, location, type, and organizer details to help you stay informed and prepared.
+            </p>
             <motion.div
                 className="w-11/12 mx-auto grid grid-cols-1 md:grid-cols-2 bg-base-100 rounded-3xl shadow-lg overflow-hidden border border-primary/10 transition-all"
                 initial={{ opacity: 0, y: 30 }}
@@ -307,7 +309,7 @@ const EventDetails = () => {
                     <div>
                         <h2 className="text-4xl font-bold mb-4">{event.name}</h2>
 
-                        <div className="space-y-3 text-gray-600 mb-6">
+                        <div className="space-y-3  mb-6">
                             <div className="flex items-center gap-3">
                                 <Calendar className="w-5 h-5 text-blue-600" />
                                 <span>{new Date(event.date).toLocaleDateString()}</span>
@@ -331,7 +333,7 @@ const EventDetails = () => {
                         </div>
 
                         <h3 className="text-xl font-semibold  mb-2">Description</h3>
-                        <p className="text-gray-700 whitespace-pre-line leading-relaxed pr-4">
+                        <p className=" whitespace-pre-line leading-relaxed pr-4">
                             {event.description}
                         </p>
                     </div>

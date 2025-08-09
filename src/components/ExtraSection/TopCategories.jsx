@@ -47,14 +47,14 @@ const TopCategories = () => {
             </motion.h2>
 
             <p className="text-gray-500 max-w-2xl mx-auto mb-6 text-center">
-                Whether you're an athlete or an organizer, our platform makes it easy to connect, compete, and grow.
+                Explore the most popular sports and activities loved by our community.
             </p>
 
             <div className="w-11/12 mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
                 {categories.map((cat, index) => (
                     <motion.div
                         key={index}
-                        className="bg-base-100 p-6 rounded-xl shadow-md hover:shadow-xl transition duration-300 text-center"
+                        className="bg-base-100 p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 text-center hover:scale-105"
                         initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.4, delay: index * 0.1 }}

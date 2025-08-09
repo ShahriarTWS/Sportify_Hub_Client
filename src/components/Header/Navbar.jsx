@@ -173,50 +173,50 @@ const Navbar = () => {
                                                     <NavLink
                                                         to="/eventInfo/create-event"
                                                         className={({ isActive }) =>
-                                                            `block px-3 py-2 rounded-md transition-colors ${isActive
+                                                            ` rounded-md transition-colors flex gap-2 px-3 py-2 items-center ${isActive
                                                                 ? "bg-base-300  underline underline-offset-4"
                                                                 : "hover:text-blue-600 hover:bg-gray-50  "
                                                             }`
                                                         }
                                                         onClick={() => setIsOpen(false)}
                                                     >
-                                                        Create Event
+                                                        <Plus /> Create Event
                                                     </NavLink>
                                                 </li>
                                                 <li>
                                                     <NavLink
                                                         to="/eventInfo/myBookings"
                                                         className={({ isActive }) =>
-                                                            `block px-3 py-2 rounded-md transition-colors ${isActive
+                                                            ` rounded-md transition-colors flex gap-2 px-3 py-2 items-center ${isActive
                                                                 ? "bg-base-300  underline underline-offset-4"
                                                                 : "hover:text-blue-600 hover:bg-gray-50  "
                                                             }`
                                                         }
                                                         onClick={() => setIsOpen(false)}
                                                     >
-                                                        My Bookings
+                                                        <Calendar /> My Bookings
                                                     </NavLink>
                                                 </li>
                                                 <li>
                                                     <NavLink
                                                         to="/eventInfo/manageEvents"
                                                         className={({ isActive }) =>
-                                                            `block px-3 py-2 rounded-md transition-colors ${isActive
+                                                            ` rounded-md transition-colors flex gap-2 px-3 py-2 items-center ${isActive
                                                                 ? "bg-base-300  underline underline-offset-4"
                                                                 : "hover:text-blue-600 hover:bg-gray-50  "
                                                             }`
                                                         }
                                                         onClick={() => setIsOpen(false)}
                                                     >
-                                                        Manage Events
+                                                        <Settings /> Manage Events
                                                     </NavLink>
                                                 </li>
                                                 <li>
                                                     <button
                                                         onClick={handleLogout}
-                                                        className="w-full text-left px-4 py-2 text-red-600 hover:bg-red-100 dark:hover:bg-red-900/30"
+                                                        className="w-full text-lefttext-red-600 hover:bg-red-100 dark:hover:bg-red-900/30 flex gap-2 px-3 py-2 items-center"
                                                     >
-                                                        Logout
+                                                        <LogOut /> Logout
                                                     </button>
                                                 </li>
                                             </ul>

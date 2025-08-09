@@ -7,10 +7,11 @@ import HowSportifyHubWorks from '../../components/ExtraSection/HowSportifyHubWor
 import TopCategories from '../../components/ExtraSection/TopCategories';
 import WhatPeopleSay from '../../components/ExtraSection/WhatPeopleSay';
 import ScrollToTop from '../ScrollToTop/ScrollToTop';
+import BottomCreateEvent from '../../components/ExtraSection/BottomCreateEvent';
 
 const Home = () => {
   return (
-    <div>
+    <div className='transition-all'>
       <title>SportifyHub || Home</title>
 
       <ScrollToTop></ScrollToTop>
@@ -27,6 +28,7 @@ const Home = () => {
         <HowSportifyHubWorks></HowSportifyHubWorks>
         <TopCategories></TopCategories>
         <WhatPeopleSay></WhatPeopleSay>
+        <BottomCreateEvent></BottomCreateEvent>
       </main>
 
       <footer>

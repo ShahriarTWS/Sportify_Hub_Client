@@ -107,12 +107,12 @@ const Register = () => {
     };
 
     return (
-        <div className="flex flex-col-reverse md:flex-row items-center justify-center gap-10 min-h-screen bg-gray-50 px-6 py-12">
+        <div className="flex flex-col-reverse md:flex-row items-center justify-center gap-10 min-h-screen bg-base-200 px-6 py-12  ">
             <title>SportifyHub || Register</title>
 
             {/* Form Section */}
-            <div className="w-full max-w-md bg-white p-8 rounded-2xl shadow-xl">
-                <h2 className="text-2xl font-bold text-center text-gray-800 mb-6">Create an Account</h2>
+            <div className="w-full max-w-md bg-base-100 p-8 rounded-2xl shadow-xl">
+                <h2 className="text-2xl font-bold text-center  mb-6">Create an Account</h2>
 
                 <form onSubmit={handleRegister} className="space-y-5">
                     {/* Name */}
@@ -189,9 +189,13 @@ const Register = () => {
                 <div className="my-4">
                     <button
                         onClick={handleGoogleLogin}
-                        className="w-full flex items-center justify-center gap-2 py-2 border text-black bg-white hover:bg-gray-100 rounded-md"
+                        className="w-full border flex items-center justify-center gap-2 py-2 rounded-md hover:bg-base-200 transition"
                     >
-                        <svg aria-label="Google logo" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><g><path fill="#fff" d="M0 0h512v512H0z" /><path fill="#34a853" d="M153 292c30 82 118 95 171 60h62v48A192 192 0 0190 341" /><path fill="#4285f4" d="M386 400a140 175 0 0053-179H260v74h102q-7 37-38 57" /><path fill="#fbbc02" d="M90 341a208 200 0 010-171l63 49q-12 37 0 73" /><path fill="#ea4335" d="M153 219c22-69 116-109 179-50l55-54c-78-75-230-72-297 55" /></g></svg>
+                        <img
+                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Google_Favicon_2025.svg/1024px-Google_Favicon_2025.svg.png"
+                            alt="Google"
+                            className="w-5 h-5"
+                        />
                         Continue with Google
                     </button>
                 </div>

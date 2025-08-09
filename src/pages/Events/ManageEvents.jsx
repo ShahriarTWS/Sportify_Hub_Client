@@ -70,7 +70,7 @@ const ManageEvents = () => {
     if (loading) return <Loading />;
 
     return (
-        <div>
+        <div className='bg-base-200 min-h-screen transition-all'>
             <div className="w-11/12  mx-auto py-10">
                 <title>SportifyHub || Manage Events</title>
                 <ScrollToTop></ScrollToTop>
@@ -90,27 +90,27 @@ const ManageEvents = () => {
                     <>
                         {/* Desktop Table */}
                         <div className="hidden md:block overflow-x-auto rounded-lg shadow">
-                            <table className="min-w-full divide-y divide-gray-200 bg-white">
-                                <thead className="bg-gray-100">
+                            <table className="min-w-full divide-y divide-gray-200 bg-base-100">
+                                <thead className="bg-base-100">
                                     <tr>
-                                        <th className="px-6 py-3 text-left text-sm font-semibold text-gray-700">Image</th>
-                                        <th className="px-6 py-3 text-left text-sm font-semibold text-gray-700">Name</th>
-                                        <th className="px-6 py-3 text-left text-sm font-semibold text-gray-700">Date</th>
-                                        <th className="px-6 py-3 text-left text-sm font-semibold text-gray-700">Location</th>
-                                        <th className="px-6 py-3 text-center text-sm font-semibold text-gray-700">Actions</th>
+                                        <th className="px-6 py-3 text-left text-sm font-semibold ">Image</th>
+                                        <th className="px-6 py-3 text-left text-sm font-semibold ">Name</th>
+                                        <th className="px-6 py-3 text-left text-sm font-semibold ">Date</th>
+                                        <th className="px-6 py-3 text-left text-sm font-semibold ">Location</th>
+                                        <th className="px-6 py-3 text-center text-sm font-semibold ">Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody className="divide-y divide-gray-200">
                                     {events.map((event) => (
-                                        <tr key={event._id} className="hover:bg-gray-50">
+                                        <tr key={event._id} className="hover:bg-primary/10">
                                             <td className="px-6 py-4">
                                                 <img src={event.image} alt={event.name} className="w-20 h-14 object-cover rounded" />
                                             </td>
-                                            <td className="px-6 py-4 font-medium text-gray-800">{event.name}</td>
-                                            <td className="px-6 py-4 text-gray-600">
+                                            <td className="px-6 py-4 font-medium">{event.name}</td>
+                                            <td className="px-6 py-4 ">
                                                 {new Date(event.date).toLocaleDateString()}
                                             </td>
-                                            <td className="px-6 py-4 text-gray-600">{event.location}</td>
+                                            <td className="px-6 py-4 ">{event.location}</td>
                                             <td className="px-6 py-4 text-center">
                                                 <div className="flex justify-center gap-3">
                                                     <button
