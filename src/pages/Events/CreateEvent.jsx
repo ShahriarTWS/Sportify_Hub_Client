@@ -45,11 +45,11 @@ const CreateEvent = () => {
 
 
   return (
-    <div className="min-h-screen bg-gradient-to-tr from-blue-50 to-white flex items-center justify-center px-6 py-16">
+    <div className="min-h-screen bg-base-200 flex items-center justify-center px-6 py-16">
       <title>SportifyHub || Create Event</title>
       <ScrollToTop></ScrollToTop>
-      <div className="w-full max-w-4xl bg-white rounded-3xl shadow-lg p-10 sm:p-12">
-        <h2 className="text-3xl font-extrabold text-center text-blue-700 mb-10">
+      <div className="w-full max-w-4xl bg-base-100 rounded-3xl shadow-lg p-10 sm:p-12">
+        <h2 className="text-3xl font-extrabold text-center mb-10">
           Create a New Event
         </h2>
 
@@ -78,7 +78,7 @@ const CreateEvent = () => {
               </label>
               <select
                 {...register('type', { required: true })}
-                className="w-full rounded-lg border border-gray-300 px-4 py-3 placeholder-gray-400
+                className="w-full bg-base-100 rounded-lg border border-gray-300 px-4 py-3 placeholder-gray-400
                   focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition"
                 required
               >
@@ -162,7 +162,7 @@ const CreateEvent = () => {
                 type="text"
                 value={user?.displayName || ''}
                 readOnly
-                className="w-full rounded-lg border border-gray-300 bg-gray-100 px-4 py-3
+                className="w-full rounded-lg border border-gray-300 bg-base-200 px-4 py-3
                   outline-none cursor-not-allowed"
               />
             </div>
@@ -176,7 +176,7 @@ const CreateEvent = () => {
                 type="email"
                 value={user?.email || ''}
                 readOnly
-                className="w-full rounded-lg border border-gray-300 bg-gray-100 px-4 py-3
+                className="w-full rounded-lg border border-gray-300 bg-base-200 px-4 py-3
                   outline-none cursor-not-allowed"
               />
             </div>
