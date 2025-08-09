@@ -6,7 +6,7 @@ const Header = () => {
     return (
         <div className=' w-full'>
             <ScrollToTop></ScrollToTop>
-            <div className='py-3 mx-auto'>
+            <div className='py-3 mx-auto '>
                 <Navbar></Navbar>
             </div>
         </div>

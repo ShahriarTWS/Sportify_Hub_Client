@@ -20,7 +20,7 @@ const MyBookings = () => {
             }
 
             try {
-                const res = await fetch(`https://sportify-hub-server-nine.vercel.app/bookings?user_email=${user.email}`, {
+                const res = await fetch(`http://localhost:3000/bookings?user_email=${user.email}`, {
                     headers: {
                         authorization: `Bearer ${user?.accessToken || ''}`
                     },
@@ -60,7 +60,7 @@ const MyBookings = () => {
         if (!confirm.isConfirmed) return;
 
         try {
-            const res = await fetch(`https://sportify-hub-server-nine.vercel.app/bookings/${bookingId}`, {
+            const res = await fetch(`http://localhost:3000/bookings/${bookingId}`, {
                 method: 'DELETE',
             });
 
@@ -87,7 +87,7 @@ const MyBookings = () => {
     }
 
     return (
-        <div className="max-w-7xl mx-auto px-4 sm:px-8 py-12">
+        <div className="w-11/12 mx-auto px-4 sm:px-8 py-12 min-h-screen">
             <title>SportifyHub || My Bookings</title>
             <ScrollToTop></ScrollToTop>
             <div className="flex justify-between items-center mb-6">
@@ -157,7 +157,7 @@ const MyBookings = () => {
                 </div>
             ) : (
                 // CARD VIEW
-                <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
                     {bookings.map(({ _id, eventName, eventDate, eventLocation, bookingTime }) => (
                         <div
                             key={_id}

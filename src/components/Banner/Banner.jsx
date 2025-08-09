@@ -14,7 +14,8 @@ const Banner = () => {
     const [upcomingEvents, setUpcomingEvents] = useState([])
     const { loading, setLoading } = useAuth()
     useEffect(() => {
-        fetch('https://sportify-hub-server-nine.vercel.app/all-events',)
+        // fetch('http://localhost:3000/all-events',)
+        fetch('http://localhost:3000/all-events',)
             .then(res => res.json())
             .then(data => {
                 setUpcomingEvents(data);
@@ -50,15 +51,15 @@ const Banner = () => {
                     <SwiperSlide key={event.id}>
                         {/* Slide background image */}
                         <div
-                            className="relative h-full w-full bg-center bg-cover flex items-center justify-center"
+                            className="relative h-full w-full bg-center bg-cover flex items-center justify-center "
                             style={{ backgroundImage: `url(${event.image})` }}
                         >
                             {/* Dark overlay for readability */}
-                            <div className="absolute inset-0 bg-[#00000075]"></div>
+                            <div className="absolute inset-0 bg-[#00000090]"></div>
 
                             {/* Content */}
                             <div className="relative z-10 text-center max-w-3xl px-4">
-                                <h2 className="text-4xl px-2 md:px-0 md:text-6xl font-bold text-white mb-4">
+                                <h2 className="text-4xl px-2 md:px-0 md:text-6xl font-bold text-white mb-4 ">
                                     {event.name}
 
                                 </h2>

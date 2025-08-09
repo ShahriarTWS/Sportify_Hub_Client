@@ -25,6 +25,11 @@ export const router = createBrowserRouter([
                 path: '',
                 element: <Home></Home>
             },
+
+            {
+                path: '/about',
+                element: <AboutUs></AboutUs>
+            }
         ])
     },
     {
@@ -88,10 +93,10 @@ export const router = createBrowserRouter([
             }
         ])
     },
-    {
-        path: '/about',
-        element: <AboutUs></AboutUs>
-    },
+    // {
+    //     path: '/about',
+    //     element: <AboutUs></AboutUs>
+    // },
     {
         path: '*',
         element: <ErrorPage></ErrorPage>

@@ -10,7 +10,7 @@ const FeaturedEvents = () => {
     const { loading, setLoading } = useAuth();
 
     useEffect(() => {
-        fetch("https://sportify-hub-server-nine.vercel.app/all-events")
+        fetch("http://localhost:3000/all-events")
             .then((res) => res.json())
             .then((data) => {
                 setEvents(data);
@@ -34,11 +34,11 @@ const FeaturedEvents = () => {
     }
 
     return (
-        <div className="bg-primary">
+        <div className="bg-base-200">
             <ScrollToTop></ScrollToTop>
-            <section className="max-w-7xl mx-auto px-4 py-12">
+            <section className="w-11/12 mx-auto py-12">
                 <motion.h2
-                    className="text-3xl font-bold text-base-100 mb-8 text-center "
+                    className="text-3xl font-bold mb-8 text-center "
                     // initial={{ opacity: 0, y: 10 }}
                     // whileInView={{ opacity: 1, y: 0 }}
                     // transition={{ duration: 0.3 }}
@@ -54,7 +54,7 @@ const FeaturedEvents = () => {
                     {sortedEvents.map((event, index) => (
                         <motion.div
                             key={event._id}
-                            className="bg-base-100 rounded-lg shadow-md overflow-hidden flex flex-col"
+                            className="bg-base-100 rounded-lg shadow-md overflow-hidden flex flex-col hover:scale-105 transition-all border border-primary/20"
                             initial={{ opacity: 0, y: 10 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.2, delay: index * 0.05 }}
@@ -67,10 +67,10 @@ const FeaturedEvents = () => {
                                 loading="lazy"
                             />
                             <div className="p-6 flex flex-col flex-grow">
-                                <h3 className="text-xl font-semibold mb-2 text-primary">
+                                <h3 className="text-xl font-semibold mb-2">
                                     {event.name}
                                 </h3>
-                                <p className="text-gray-600 mb-1">
+                                <p className="text-base mb-1">
                                     📅{" "}
                                     {new Date(event.date).toLocaleDateString(undefined, {
                                         year: "numeric",
@@ -78,8 +78,8 @@ const FeaturedEvents = () => {
                                         day: "numeric",
                                     })}
                                 </p>
-                                <p className="text-gray-600 mb-4">📍 {event.location}</p>
-                                <button className="btn btn-accent mt-auto py-2 rounded-md font-semibold hover:brightness-110 transition">
+                                <p className="text-base mb-4">📍 {event.location}</p>
+                                <button className="btn bg-blue-600 mt-auto py-2 rounded-md font-semibold hover:brightness-110 transition text-base-100">
                                     <Link to={`/eventInfo/events/${event._id}`}>
                                         View Details
                                     </Link>
@@ -98,7 +98,7 @@ const FeaturedEvents = () => {
                 >
                     <button
                         onClick={() => navigate("/events")}
-                        className="btn btn-primary px-8 py-3 bg-blue-500 text-white rounded-md font-semibold hover:bg-neutral transition"
+                        className="btn btn-primary px-8 py-3 bg-blue-600 text-white rounded-md font-semibold hover:bg-neutral transition"
                     >
                         See All Events
                     </button>

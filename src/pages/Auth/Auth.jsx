@@ -9,7 +9,7 @@ const Auth = () => {
         <div>
             <ScrollToTop></ScrollToTop>
             <header className="sticky top-0 z-50 bg-primary shadow-sm">
-                <section className="w-full max-w-screen-xl mx-auto">
+                <section className="w-full ">
                     <Header />
                 </section>
             </header>

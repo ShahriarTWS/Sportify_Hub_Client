@@ -17,7 +17,7 @@
 //     useEffect(() => {
 //         const fetchEvent = async () => {
 //             try {
-//                 const res = await fetch(`https://sportify-hub-server-nine.vercel.app/events/${id}`);
+//                 const res = await fetch(`http://localhost:3000/events/${id}`);
 //                 const data = await res.json();
 //                 setEvent(data);
 //             } catch (error) {
@@ -51,7 +51,7 @@
 //         };
 
 //         try {
-//             const res = await fetch('https://sportify-hub-server-nine.vercel.app/bookings', {
+//             const res = await fetch('http://localhost:3000/bookings', {
 //                 method: 'POST',
 //                 headers: { 'Content-Type': 'application/json' },
 //                 body: JSON.stringify(bookingData),
@@ -193,7 +193,7 @@ const EventDetails = () => {
     useEffect(() => {
         const fetchEvent = async () => {
             try {
-                const res = await fetch(`https://sportify-hub-server-nine.vercel.app/events/${id}`);
+                const res = await fetch(`http://localhost:3000/events/${id}`);
                 const data = await res.json();
                 setEvent(data);
             } catch (error) {
@@ -203,7 +203,7 @@ const EventDetails = () => {
 
         const fetchParticipantCount = async () => {
             try {
-                const res = await fetch(`https://sportify-hub-server-nine.vercel.app/bookings/count/${id}`);
+                const res = await fetch(`http://localhost:3000/bookings/count/${id}`);
                 const data = await res.json();
                 setParticipantCount(data.count || 0);
             } catch (error) {
@@ -237,7 +237,7 @@ const EventDetails = () => {
         };
 
         try {
-            const res = await fetch('https://sportify-hub-server-nine.vercel.app/bookings', {
+            const res = await fetch('http://localhost:3000/bookings', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(bookingData),
@@ -279,16 +279,16 @@ const EventDetails = () => {
     }
 
     return (
-        <div className="bg-gradient-to-b from-blue-50 to-white py-16 px-4 sm:px-8 lg:px-20">
+        <div className="bg-base-200 py-16 ">
             <title>SportifyHub || Event Details</title>
             <ScrollToTop />
 
-            <h1 className="text-4xl font-extrabold text-blue-700 text-center mb-12">
+            <h1 className="text-4xl font-extrabold text-center mb-12">
                 Event Details
             </h1>
 
             <motion.div
-                className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 bg-white rounded-3xl shadow-lg overflow-hidden"
+                className="w-11/12 mx-auto grid grid-cols-1 md:grid-cols-2 bg-base-100 rounded-3xl shadow-lg overflow-hidden border border-primary/10 transition-all"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
@@ -305,7 +305,7 @@ const EventDetails = () => {
                 {/* Right: Info */}
                 <div className="p-8 flex flex-col justify-between">
                     <div>
-                        <h2 className="text-3xl font-bold text-gray-800 mb-4">{event.name}</h2>
+                        <h2 className="text-4xl font-bold mb-4">{event.name}</h2>
 
                         <div className="space-y-3 text-gray-600 mb-6">
                             <div className="flex items-center gap-3">
@@ -330,7 +330,7 @@ const EventDetails = () => {
                             </div>
                         </div>
 
-                        <h3 className="text-xl font-semibold text-gray-700 mb-2">Description</h3>
+                        <h3 className="text-xl font-semibold  mb-2">Description</h3>
                         <p className="text-gray-700 whitespace-pre-line leading-relaxed pr-4">
                             {event.description}
                         </p>

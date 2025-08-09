@@ -17,7 +17,7 @@ const Events = () => {
     useEffect(() => {
         const fetchEvents = async () => {
             try {
-                const res = await fetch('https://sportify-hub-server-nine.vercel.app/all-events');
+                const res = await fetch('http://localhost:3000/all-events');
                 const data = await res.json();
                 const sorted = data.sort((a, b) => new Date(a.date) - new Date(b.date));
                 setEvents(sorted);
@@ -56,24 +56,24 @@ const Events = () => {
 
     return (
         <motion.div
-            className="min-h-screen bg-gray-50 py-8"
+            className="min-h-screen bg-base-200 py-8"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
         >
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="w-11/12 mx-auto">
                 <ScrollToTop></ScrollToTop>
                 <title>SportifyHub || All Events</title>
                 {/* Header */}
                 <div className="text-center mb-8">
-                    <h1 className="text-4xl font-bold text-gray-900 mb-4">Athletic Events</h1>
-                    <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                    <h1 className="text-4xl font-bold  mb-4">Athletic Events</h1>
+                    <p className="md:text-xl text-gray-500 max-w-3xl mx-auto">
                         Discover and join exciting athletic events in your area. From swimming to sprinting, find the perfect competition for your skills.
                     </p>
                 </div>
 
                 {/* Search and Filter */}
-                <div className="bg-white p-6 rounded-lg shadow-md mb-8">
+                <div className="bg-base-100 p-6 rounded-lg shadow-md mb-8">
                     <div className="flex flex-col md:flex-row gap-4">
                         <div className="flex-1 relative">
                             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
@@ -90,11 +90,11 @@ const Events = () => {
                             <select
                                 value={selectedType}
                                 onChange={(e) => setSelectedType(e.target.value)}
-                                className="pl-10 pr-8 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent appearance-none bg-white min-w-[200px]"
+                                className="pl-10 pr-8 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent appearance-none  md:min-w-[200px]"
                             >
                                 <option value="">All Event Types</option>
                                 {eventTypes.map((type) => (
-                                    <option key={type} value={type}>{type}</option>
+                                    <option key={type} className='bg-base-100' value={type}>{type}</option>
                                 ))}
                             </select>
                         </div>
@@ -146,7 +146,7 @@ const Events = () => {
                                 }}
                                 whileHover={{ scale: 1.03 }}
                                 transition={{ duration: 0.1 }}
-                                className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all"
+                                className="bg-base-100 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all"
                             >
                                 <div className="relative h-48">
                                     <img
@@ -166,20 +166,20 @@ const Events = () => {
                                     </div>
                                 </div>
                                 <div className="p-6">
-                                    <h3 className="text-xl font-bold text-gray-900 mb-2 line-clamp-2">
+                                    <h3 className="text-xl font-bold  mb-2 line-clamp-2">
                                         {event.name}
                                     </h3>
-                                    <div className="flex items-center text-gray-600 mb-2">
+                                    <div className="flex items-center  mb-2">
                                         <Calendar className="h-4 w-4 mr-2" />
                                         <span className="text-sm">{new Date(event.date).toLocaleDateString()}</span>
                                     </div>
-                                    <div className="flex items-center text-gray-600 mb-4">
+                                    <div className="flex items-center  mb-4">
                                         <MapPin className="h-4 w-4 mr-2" />
                                         <span className="text-sm line-clamp-1">{event.location}</span>
                                     </div>
-                                    <p className="text-gray-700 mb-4 line-clamp-3">{event.description}</p>
+                                    <p className="text-gray-400 mb-4 line-clamp-3">{event.description}</p>
                                     <div className="flex items-center justify-between">
-                                        <span className="text-sm text-gray-500">
+                                        <span className="text-sm ">
                                             By {event.creatorName || 'Admin'}
                                         </span>
                                         <Link

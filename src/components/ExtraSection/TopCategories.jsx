@@ -34,10 +34,10 @@ const categories = [
 
 const TopCategories = () => {
     return (
-        <section className="bg-base-100 py-16 px-4">
+        <section className="bg-base-200 py-16">
             <ScrollToTop></ScrollToTop>
             <motion.h2
-                className="text-3xl md:text-4xl font-bold text-gray-800 mb-6 text-center"
+                className="text-3xl md:text-4xl font-bold  mb-3 text-center"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
@@ -46,19 +46,23 @@ const TopCategories = () => {
                 Top Categories
             </motion.h2>
 
-            <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+            <p className="text-gray-500 max-w-2xl mx-auto mb-6 text-center">
+                Whether you're an athlete or an organizer, our platform makes it easy to connect, compete, and grow.
+            </p>
+
+            <div className="w-11/12 mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
                 {categories.map((cat, index) => (
                     <motion.div
                         key={index}
-                        className="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition duration-300 text-center"
+                        className="bg-base-100 p-6 rounded-xl shadow-md hover:shadow-xl transition duration-300 text-center"
                         initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.4, delay: index * 0.1 }}
                         viewport={{ once: false, amount: 0.2 }}
                     >
                         <div className="mb-4 flex justify-center">{cat.icon}</div>
-                        <h3 className="text-lg font-semibold text-primary mb-2">{cat.name}</h3>
-                        <p className="text-gray-600 text-sm">{cat.description}</p>
+                        <h3 className="text-lg font-semibold mb-2">{cat.name}</h3>
+                        <p className="text-gray-500 text-sm">{cat.description}</p>
                     </motion.div>
                 ))}
             </div>

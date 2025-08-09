@@ -53,7 +53,7 @@ const AuthProvider = ({ children }) => {
                 const firebaseToken = await currentUser.getIdToken();
 
                 // send token to backend login route to set cookie
-                fetch('https://sportify-hub-server-nine.vercel.app/login', {
+                fetch('http://localhost:3000/login', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     credentials: 'include',
