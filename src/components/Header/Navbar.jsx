@@ -175,7 +175,7 @@ const Navbar = () => {
                                                         className={({ isActive }) =>
                                                             `block px-3 py-2 rounded-md transition-colors ${isActive
                                                                 ? "bg-base-300  underline underline-offset-4"
-                                                                : "hover:text-blue-600 text-white hover:bg-gray-50  "
+                                                                : "hover:text-blue-600 hover:bg-gray-50  "
                                                             }`
                                                         }
                                                         onClick={() => setIsOpen(false)}
@@ -189,7 +189,7 @@ const Navbar = () => {
                                                         className={({ isActive }) =>
                                                             `block px-3 py-2 rounded-md transition-colors ${isActive
                                                                 ? "bg-base-300  underline underline-offset-4"
-                                                                : "hover:text-blue-600 text-white hover:bg-gray-50  "
+                                                                : "hover:text-blue-600 hover:bg-gray-50  "
                                                             }`
                                                         }
                                                         onClick={() => setIsOpen(false)}
@@ -203,7 +203,7 @@ const Navbar = () => {
                                                         className={({ isActive }) =>
                                                             `block px-3 py-2 rounded-md transition-colors ${isActive
                                                                 ? "bg-base-300  underline underline-offset-4"
-                                                                : "hover:text-blue-600 text-white hover:bg-gray-50  "
+                                                                : "hover:text-blue-600 hover:bg-gray-50  "
                                                             }`
                                                         }
                                                         onClick={() => setIsOpen(false)}

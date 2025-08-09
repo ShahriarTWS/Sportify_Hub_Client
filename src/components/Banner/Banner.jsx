@@ -55,7 +55,7 @@ const Banner = () => {
                             style={{ backgroundImage: `url(${event.image})` }}
                         >
                             {/* Dark overlay for readability */}
-                            <div className="absolute inset-0 bg-[#00000090]"></div>
+                            <div className="absolute inset-0 bg-[#00000095]"></div>
 
                             {/* Content */}
                             <div className="relative z-10 text-center max-w-3xl px-4">
