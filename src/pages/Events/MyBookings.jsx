@@ -87,104 +87,106 @@ const MyBookings = () => {
     }
 
     return (
-        <div className="w-11/12 mx-auto px-4 sm:px-8 py-12 min-h-screen">
-            <title>SportifyHub || My Bookings</title>
-            <ScrollToTop></ScrollToTop>
-            <div className="flex justify-between items-center mb-6">
-                <h1 className="text-3xl font-bold">My Bookings</h1>
+        <div className='bg-base-200 transition-all'>
+            <div className="w-11/12 mx-auto py-12 min-h-screen">
+                <title>SportifyHub || My Bookings</title>
+                <ScrollToTop></ScrollToTop>
+                <div className="flex justify-between items-center mb-6">
+                    <h1 className="text-3xl mx-auto font-bold">My Bookings</h1>
 
-                <div className="flex gap-2">
-                    {/* Table View Button */}
-                    <button
-                        onClick={() => setIsTableView(true)}
-                        className={`p-2 rounded-lg border transition ${isTableView
-                            ? 'bg-blue-600 text-white border-blue-700 shadow'
-                            : 'bg-white text-gray-600 border-gray-300 hover:bg-gray-100'
-                            }`}
-                        title="Table View"
-                    >
-                        <LayoutList className="w-6 h-6" />
-                    </button>
-
-                    {/* Card View Button */}
-                    <button
-                        onClick={() => setIsTableView(false)}
-                        className={`p-2 rounded-lg border transition ${!isTableView
-                            ? 'bg-blue-600 text-white border-blue-700 shadow'
-                            : 'bg-white text-gray-600 border-gray-300 hover:bg-gray-100'
-                            }`}
-                        title="Card View"
-                    >
-                        <LayoutGrid className="w-6 h-6" />
-                    </button>
-                </div>
-            </div>
-
-
-
-            {isTableView ? (
-                // TABLE VIEW
-                <div className="overflow-x-auto">
-                    <table className="min-w-full bg-white border border-gray-200 rounded-lg shadow-md">
-                        <thead>
-                            <tr className="bg-blue-600 text-white">
-                                <th className="py-3 px-6 text-left">Event Name</th>
-                                <th className="py-3 px-6 text-left">Date</th>
-                                <th className="py-3 px-6 text-left">Location</th>
-                                <th className="py-3 px-6 text-left">Booked On</th>
-                                <th className="py-3 px-6 text-center">Actions</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {bookings.map(({ _id, eventName, eventDate, eventLocation, bookingTime }) => (
-                                <tr key={_id} className="border-b border-gray-200 hover:bg-gray-100">
-                                    <td className="py-4 px-6">{eventName}</td>
-                                    <td className="py-4 px-6">{new Date(eventDate).toLocaleDateString()}</td>
-                                    <td className="py-4 px-6">{eventLocation}</td>
-                                    <td className="py-4 px-6">{new Date(bookingTime).toLocaleString()}</td>
-                                    <td className="py-4 px-6 text-center">
-                                        <button
-                                            onClick={() => handleDelete(_id)}
-                                            className="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg transition"
-                                        >
-                                            Cancel
-                                        </button>
-                                    </td>
-                                </tr>
-                            ))}
-                        </tbody>
-                    </table>
-                </div>
-            ) : (
-                // CARD VIEW
-                <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-                    {bookings.map(({ _id, eventName, eventDate, eventLocation, bookingTime }) => (
-                        <div
-                            key={_id}
-                            className="bg-white rounded-2xl shadow-md p-6 flex flex-col justify-between border"
+                    <div className="flex gap-2">
+                        {/* Table View Button */}
+                        <button
+                            onClick={() => setIsTableView(true)}
+                            className={`p-2 rounded-lg border transition ${isTableView
+                                ? 'bg-blue-600 text-white border-blue-700 shadow'
+                                : 'bg-white text-gray-600 border-gray-300 hover:bg-gray-100'
+                                }`}
+                            title="Table View"
                         >
-                            <div>
-                                <h2 className="text-xl font-semibold text-gray-800 mb-2">{eventName}</h2>
-                                <p className="text-gray-600 mb-1">
-                                    <strong>Date:</strong> {new Date(eventDate).toLocaleDateString()}
-                                </p>
-                                <p className="text-gray-600 mb-1">
-                                    <strong>Location:</strong> {eventLocation}
-                                </p>
-                                <p className="text-gray-600">
-                                    <strong>Booked On:</strong> {new Date(bookingTime).toLocaleString()}
-                                </p>
-                            </div>
-                            <button
-                                onClick={() => handleDelete(_id)}
-                                className="mt-4 bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg transition"
-                            >
-                                Cancel Booking
-                            </button>
-                        </div>
-                    ))}
+                            <LayoutList className="w-6 h-6" />
+                        </button>
+
+                        {/* Card View Button */}
+                        <button
+                            onClick={() => setIsTableView(false)}
+                            className={`p-2 rounded-lg border transition ${!isTableView
+                                ? 'bg-blue-600 text-white border-blue-700 shadow'
+                                : 'bg-white text-gray-600 border-gray-300 hover:bg-gray-100'
+                                }`}
+                            title="Card View"
+                        >
+                            <LayoutGrid className="w-6 h-6" />
+                        </button>
+                    </div>
                 </div>
-            )}
+
+
+
+                {isTableView ? (
+                    // TABLE VIEW
+                    <div className="overflow-x-auto">
+                        <table className="min-w-full bg-base-100 border border-gray-200 rounded-lg shadow-md">
+                            <thead>
+                                <tr className="bg-blue-600 text-white">
+                                    <th className="py-3 px-6 text-left">Event Name</th>
+                                    <th className="py-3 px-6 text-left">Date</th>
+                                    <th className="py-3 px-6 text-left">Location</th>
+                                    <th className="py-3 px-6 text-left">Booked On</th>
+                                    <th className="py-3 px-6 text-center">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {bookings.map(({ _id, eventName, eventDate, eventLocation, bookingTime }) => (
+                                    <tr key={_id} className="border-b border-gray-200 hover:bg-primary/20">
+                                        <td className="py-4 px-6">{eventName}</td>
+                                        <td className="py-4 px-6">{new Date(eventDate).toLocaleDateString()}</td>
+                                        <td className="py-4 px-6">{eventLocation}</td>
+                                        <td className="py-4 px-6">{new Date(bookingTime).toLocaleString()}</td>
+                                        <td className="py-4 px-6 text-center">
+                                            <button
+                                                onClick={() => handleDelete(_id)}
+                                                className="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg transition"
+                                            >
+                                                Cancel
+                                            </button>
+                                        </td>
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
+                    </div>
+                ) : (
+                    // CARD VIEW
+                    <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+                        {bookings.map(({ _id, eventName, eventDate, eventLocation, bookingTime }) => (
+                            <div
+                                key={_id}
+                                className="bg-white rounded-2xl shadow-md p-6 flex flex-col justify-between border"
+                            >
+                                <div>
+                                    <h2 className="text-xl font-semibold text-gray-800 mb-2">{eventName}</h2>
+                                    <p className="text-gray-600 mb-1">
+                                        <strong>Date:</strong> {new Date(eventDate).toLocaleDateString()}
+                                    </p>
+                                    <p className="text-gray-600 mb-1">
+                                        <strong>Location:</strong> {eventLocation}
+                                    </p>
+                                    <p className="text-gray-600">
+                                        <strong>Booked On:</strong> {new Date(bookingTime).toLocaleString()}
+                                    </p>
+                                </div>
+                                <button
+                                    onClick={() => handleDelete(_id)}
+                                    className="mt-4 bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg transition"
+                                >
+                                    Cancel Booking
+                                </button>
+                            </div>
+                        ))}
+                    </div>
+                )}
+            </div>
         </div>
     );
 };
