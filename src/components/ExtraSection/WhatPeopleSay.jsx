@@ -26,12 +26,12 @@ const testimonials = [
         role: "Coach, High Jump"
     },
     {
-        id: 3,
-        name: "Linda Park",
-        image: "https://randomuser.me/api/portraits/women/45.jpg",
-        text: "As a coach, managing events has never been easier. Great work, SportifyHubPoint team!",
-        role: "Coach, High Jump"
-    },
+    id: 4,
+    name: "Marcus Lee",
+    image: "https://randomuser.me/api/portraits/men/32.jpg",
+    text: "This platform connected me with top talent and exciting competitions. A game-changer for my career!",
+    role: "Player, Long Jump"
+}
 ];
 
 const fadeUp = {

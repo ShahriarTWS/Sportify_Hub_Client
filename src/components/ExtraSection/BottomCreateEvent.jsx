@@ -8,10 +8,10 @@ const BottomCreateEvent = () => {
             <section className="flex flex-col md:flex-row items-center justify-between bg-base-200 p-8 rounded-lg shadow-md w-11/12 mx-auto my-12">
                 {/* Text Content */}
                 <div className="md:w-1/2 mb-8 md:mb-0">
-                    <h1 className="text-4xl font-bold mb-4  dark:text-white">
+                    <h1 className="text-4xl font-bold mb-4 ">
                         Discover and Join Exciting Athletic Events Near You
                     </h1>
-                    <p className="text-lg  dark:text-gray-300 mb-6">
+                    <p className="text-lg  mb-6">
                         Sportify Hub helps you find, create, and manage sports events effortlessly. Join the community and take part in competitions that matter.
                     </p>
                     <Link

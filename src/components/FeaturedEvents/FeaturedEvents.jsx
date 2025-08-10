@@ -58,7 +58,7 @@ const FeaturedEvents = () => {
                     {sortedEvents.map((event, index) => (
                         <motion.div
                             key={event._id}
-                            className="bg-base-100 rounded-lg shadow-md overflow-hidden flex flex-col hover:scale-105 transition-all border border-primary/20"
+                            className="bg-base-100 rounded-lg shadow-md overflow-hidden flex flex-col transition-all border border-primary/20"
                             initial={{ opacity: 0, y: 10 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.2, delay: index * 0.05 }}
