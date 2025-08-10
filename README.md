@@ -12,7 +12,7 @@
 
 ## 🖼️ Screenshot
 
-![FreelancerPoint Screenshot](https://res.cloudinary.com/dwgj5fypm/image/upload/v1754632758/Screenshot_2025-08-08_115833_bwr87q.png)
+![FreelancerPoint Screenshot](https://res.cloudinary.com/dwgj5fypm/image/upload/v1754804070/Screenshot_2025-08-10_113410_us95qv.png)
 
 ---
 
