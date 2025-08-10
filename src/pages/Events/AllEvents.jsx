@@ -17,7 +17,7 @@ const Events = () => {
     useEffect(() => {
         const fetchEvents = async () => {
             try {
-                const res = await fetch('http://localhost:3000/all-events');
+                const res = await fetch('https://sportify-hub-server-nine.vercel.app/all-events');
                 const data = await res.json();
                 const sorted = data.sort((a, b) => new Date(a.date) - new Date(b.date));
                 setEvents(sorted);

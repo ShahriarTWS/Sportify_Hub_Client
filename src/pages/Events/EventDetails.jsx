@@ -17,7 +17,7 @@
 //     useEffect(() => {
 //         const fetchEvent = async () => {
 //             try {
-//                 const res = await fetch(`http://localhost:3000/events/${id}`);
+//                 const res = await fetch(`https://sportify-hub-server-nine.vercel.app/events/${id}`);
 //                 const data = await res.json();
 //                 setEvent(data);
 //             } catch (error) {
@@ -51,7 +51,7 @@
 //         };
 
 //         try {
-//             const res = await fetch('http://localhost:3000/bookings', {
+//             const res = await fetch('https://sportify-hub-server-nine.vercel.app/bookings', {
 //                 method: 'POST',
 //                 headers: { 'Content-Type': 'application/json' },
 //                 body: JSON.stringify(bookingData),
@@ -193,7 +193,7 @@ const EventDetails = () => {
     useEffect(() => {
         const fetchEvent = async () => {
             try {
-                const res = await fetch(`http://localhost:3000/events/${id}`);
+                const res = await fetch(`https://sportify-hub-server-nine.vercel.app/events/${id}`);
                 const data = await res.json();
                 setEvent(data);
             } catch (error) {
@@ -203,7 +203,7 @@ const EventDetails = () => {
 
         const fetchParticipantCount = async () => {
             try {
-                const res = await fetch(`http://localhost:3000/bookings/count/${id}`);
+                const res = await fetch(`https://sportify-hub-server-nine.vercel.app/bookings/count/${id}`);
                 const data = await res.json();
                 setParticipantCount(data.count || 0);
             } catch (error) {
@@ -237,7 +237,7 @@ const EventDetails = () => {
         };
 
         try {
-            const res = await fetch('http://localhost:3000/bookings', {
+            const res = await fetch('https://sportify-hub-server-nine.vercel.app/bookings', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(bookingData),

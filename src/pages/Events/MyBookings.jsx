@@ -20,7 +20,7 @@ const MyBookings = () => {
             }
 
             try {
-                const res = await fetch(`http://localhost:3000/bookings?user_email=${user.email}`, {
+                const res = await fetch(`https://sportify-hub-server-nine.vercel.app/bookings?user_email=${user.email}`, {
                     headers: {
                         authorization: `Bearer ${user?.accessToken || ''}`
                     },
@@ -60,7 +60,7 @@ const MyBookings = () => {
         if (!confirm.isConfirmed) return;
 
         try {
-            const res = await fetch(`http://localhost:3000/bookings/${bookingId}`, {
+            const res = await fetch(`https://sportify-hub-server-nine.vercel.app/bookings/${bookingId}`, {
                 method: 'DELETE',
             });
 
@@ -87,7 +87,7 @@ const MyBookings = () => {
     }
 
     return (
-        <div className='bg-base-200 transition-all'>
+        <div className='bg-base-200 transition-all '>
             <div className="w-11/12 mx-auto py-12 min-h-screen">
                 <title>SportifyHub || My Bookings</title>
                 <ScrollToTop></ScrollToTop>

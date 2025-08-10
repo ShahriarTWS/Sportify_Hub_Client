@@ -18,7 +18,7 @@ const CreateEvent = () => {
     try {
       const token = await user.getIdToken();
 
-      const response = await axios.post('http://localhost:3000/events', data, {
+      const response = await axios.post('https://sportify-hub-server-nine.vercel.app/events', data, {
         headers: {
           authorization: `Bearer ${token}`,
         },

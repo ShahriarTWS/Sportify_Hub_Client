@@ -10,7 +10,7 @@ const FeaturedEvents = () => {
     const { loading, setLoading } = useAuth();
 
     useEffect(() => {
-        fetch("http://localhost:3000/all-events")
+        fetch("https://sportify-hub-server-nine.vercel.app/all-events")
             .then((res) => res.json())
             .then((data) => {
                 setEvents(data);
@@ -36,7 +36,7 @@ const FeaturedEvents = () => {
     return (
         <div className="bg-base-200">
             <ScrollToTop></ScrollToTop>
-            <section className="w-11/12 mx-auto py-12">
+            <section className="w-11/12 mx-auto  pt-20 pb-12">
                 <motion.h2
                     className="text-3xl md:text-4xl font-bold mb-3 text-center "
                     // initial={{ opacity: 0, y: 10 }}
@@ -51,7 +51,7 @@ const FeaturedEvents = () => {
                 </motion.h2>
 
                 <p className="text-gray-500 max-w-2xl mx-auto text-center mb-6">
-                    A spotlight on the most exciting upcoming sports and competitions you won’t want to miss.
+                    Spotlight on upcoming sports and competitions you can’t miss.
                 </p>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
