@@ -339,7 +339,7 @@ const Navbar = () => {
                                 <li>
                                     <NavLink
                                         to="/auth/login"
-                                        className="block px-3 py-2 rounded-md hover:bg-primary/10 text-gray-800 dark:text-gray-200"
+                                        className="flex gap-2 px-3 py-2 items-center rounded-md hover:bg-primary/10 "
                                     >
                                         Login
                                     </NavLink>
